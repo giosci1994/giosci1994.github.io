@@ -14,6 +14,8 @@ Il sito sarà disponibile su: `https://giosci1994.github.io`
 
 ## Struttura
 
-- `index.html` — pagina unica: hero split-screen Chef/Dev, timeline carriera, progetti
-- `style.css` — dual-theme: lato chef caldo (carta/ambra, serif), lato dev scuro (verde/teal, mono)
-- Le traduzioni vivono in `index.html` nell'oggetto `I18N` (chiavi `data-i18n`)
+- `index.html` — chooser split-screen: due anime, due pagine
+- `chef.html` — il percorso in cucina (tema caldo carta/ambra, serif)
+- `dev.html` — homelab e progetti open source (tema scuro verde/teal, mono)
+- `style.css` — dual-theme condiviso
+- `assets/i18n.js` — traduzioni IT/EN condivise (chiavi `data-i18n`) + boot comune

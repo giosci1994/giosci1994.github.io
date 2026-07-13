@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#070b0a" />
+  <meta name="description"
+    content="I progetti di Giovanni La Cascia: homelab, domotica e software open source." />
+  <title>Giovanni La Cascia — Il Dev</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Giovanni La Cascia — Il Dev" />
+  <meta property="og:description" content="Homelab, domotica e software open source." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://giosci1994.github.io/dev.html" />
+  <meta property="og:image" content="https://giosci1994.github.io/assets/social-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="dev" class="dev-page">
+  <header class="topbar">
+    <a class="top-link" href="index.html" data-i18n="nav.home">← Home</a>
+    <div class="topbar-right">
+      <a class="top-link" href="chef.html" data-i18n="nav.tochef">Lo Chef →</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button id="lang-it" class="active" aria-label="Italiano">IT</button>
+        <button id="lang-en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero dark">
+    <img class="portrait" src="assets/giovanni-dev.webp" alt="Avatar dev di Giovanni La Cascia" width="168"
+      height="168" />
+    <span class="side-kicker" data-i18n="dev.kicker">// di notte</span>
+    <h1 data-i18n="dev.title">Il Dev</h1>
+    <p class="tagline" data-i18n="dev.tagline">
+      IT enthusiast · Homelab &amp; Automation. Container, domotica e
+      software open source nati da problemi veri di casa.
+    </p>
+  </section>
+
+  <section class="dev-zone">
+    <div class="container section">
+      <div class="section-head reveal">
+        <span class="dev-kicker">// side_project_di_una_vita</span>
+        <h2 data-i18n="dev.s.title">Homelab, domotica e open source</h2>
+        <p data-i18n="dev.s.lead">
+          Non sviluppatore di mestiere — appassionato vero. Un Raspberry Pi trasformato
+          in un homelab completo, e la voglia di risolvere problemi reali con software
+          fatto bene.
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="proj featured reveal">
+          <div>
+            <span class="p-badge green">Featured</span>
+            <h3>d2ha — Docker to Home Assistant</h3>
+            <p data-i18n="dev.p1">
+              Monitoraggio e controllo dei container Docker con web UI moderna e
+              autodiscovery MQTT per Home Assistant. Il progetto di punta di Arborae.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn solid" href="https://arborae.github.io/docker2homeassistant/" target="_blank"
+              rel="noreferrer">Docs</a>
+            <a class="dev-btn line" href="https://github.com/arborae/docker2homeassistant" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge green">Co-founder</span>
+            <h3>Arborae</h3>
+            <p data-i18n="dev.p2">
+              Organizzazione open source fondata con Baldo: software pulito, modulare
+              e documentato.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn line" href="https://arborae.github.io/" target="_blank" rel="noreferrer">Sito</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge grey">Tool</span>
+            <h3>feature-overrides-registry</h3>
+            <p data-i18n="dev.p3">
+              Script e tool Windows per sbloccare il supporto sperimentale NVMe nativo,
+              con rollback e release automatiche.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn line" href="https://github.com/giosci1994/feature-overrides-registry" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge wip" data-i18n="dev.wip">In sviluppo</span>
+            <h3>ha-appliance</h3>
+            <p data-i18n="dev.p4">
+              Appliance modulare per Home Assistant: deploy semplificato, wizard e App
+              Store per container.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn line" href="https://github.com/arborae/ha-appliance" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge wip" data-i18n="dev.wip2">In sviluppo</span>
+            <h3 data-i18n="dev.p5.title">Web-App Palestra</h3>
+            <p data-i18n="dev.p5">
+              Gestione schede e allenamenti in palestra. In cottura a bassa temperatura:
+              non ancora pubblica.
+            </p>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge grey">Self-hosted</span>
+            <h3>Homelab</h3>
+            <p data-i18n="dev.p6">
+              Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud,
+              WireGuard, tunnel Cloudflare e molto altro — tutto in casa.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a class="social" href="https://github.com/giosci1994" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a11 11 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+          </svg>
+        </a>
+        <a class="social" href="https://www.linkedin.com/in/giovannilacascia/" target="_blank" rel="noreferrer"
+          aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z" />
+          </svg>
+        </a>
+        <a class="social" href="https://www.instagram.com/giovannilacascia/" target="_blank" rel="noreferrer"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-note">
+        <span>© <span id="year">2026</span> Giovanni La Cascia · </span>
+        <span class="mono" data-i18n="footer.note">fatto con ❤️ tra fornelli e container</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+</body>
+
+</html>
