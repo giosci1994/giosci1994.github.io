@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#070b0a" />
+  <meta name="description"
+    content="Giovanni La Cascia — Chef & IT enthusiast. Fine dining italiano di giorno, homelab e automazioni di notte." />
+  <title>Giovanni La Cascia — Chef & Dev</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Giovanni La Cascia — Chef & Dev" />
+  <meta property="og:description" content="Fine dining italiano di giorno, homelab e automazioni di notte." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://giosci1994.github.io/" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <span class="name">Giovanni La Cascia</span>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button id="lang-it" class="active" aria-label="Italiano">IT</button>
+      <button id="lang-en" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <!-- ============ Hero split ============ -->
+  <section class="split" id="top">
+    <div class="side side-chef">
+      <div class="side-inner">
+        <span class="side-name-mobile">Giovanni La Cascia</span>
+        <img class="portrait" src="assets/giovanni-chef.png" alt="Giovanni La Cascia — chef" width="168"
+          height="168" />
+        <span class="side-kicker" data-i18n="chef.kicker">di giorno</span>
+        <h2 data-i18n="chef.title">Lo Chef</h2>
+        <p class="tagline" data-i18n="chef.tagline">
+          Fine dining italiano, pasta fresca fatta a mano e griglia a carbone.
+          Da Roma a Copenhagen, passando per Firenze e la Sicilia.
+        </p>
+        <a class="side-btn" href="#chef" data-i18n="chef.cta">Il percorso in cucina</a>
+      </div>
+    </div>
+
+    <div class="side side-dev">
+      <div class="side-inner">
+        <span class="side-name-mobile">Giovanni La Cascia</span>
+        <img class="portrait" src="assets/giovanni-dev.png" alt="Avatar dev di Giovanni La Cascia" width="168"
+          height="168" />
+        <span class="side-kicker" data-i18n="dev.kicker">// di notte</span>
+        <h2 data-i18n="dev.title">Il Dev</h2>
+        <p class="tagline" data-i18n="dev.tagline">
+          IT enthusiast · Homelab &amp; Automation. Container, domotica e
+          software open source nati da problemi veri di casa.
+        </p>
+        <a class="side-btn" href="#dev" data-i18n="dev.cta">./progetti</a>
+      </div>
+    </div>
+
+    <div class="hero-center" aria-hidden="true">
+      <div class="amp"><span>&amp;</span></div>
+    </div>
+
+    <div class="hero-name" aria-hidden="true">
+      <span class="full">Giovanni La Cascia</span>
+      <span class="sub" data-i18n="hero.sub">chef di professione · dev per passione</span>
+    </div>
+  </section>
+
+  <!-- ============ Chef section ============ -->
+  <section id="chef" class="chef-zone">
+    <div class="container section">
+      <div class="section-head reveal">
+        <span class="chef-kicker" data-i18n="chef.s.kicker">La cucina</span>
+        <h2 data-i18n="chef.s.title">Dieci anni tra i fornelli</h2>
+        <p data-i18n="chef.s.lead">
+          Laureato in Arti Culinarie all’Accademia Italiana di Cucina di Firenze, ho
+          cucinato in hotel cinque stelle, ristoranti fine dining e resort — dall’Italia
+          al Regno Unito, fino alla Danimarca.
+        </p>
+      </div>
+
+      <div class="chef-grid">
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="t-period">2023 — 2026</span>
+            <div class="t-role">Chef de Partie</div>
+            <div class="t-place">Circolo · Copenhagen 🇩🇰</div>
+            <p class="t-desc" data-i18n="chef.t1">
+              Pasta artigianale prodotta ogni giorno (pappardelle, gnudi, gnocchi), cotture
+              alla griglia a carbone Josper, materie prime da piccoli produttori italiani.
+            </p>
+          </li>
+          <li class="reveal">
+            <span class="t-period">2022</span>
+            <div class="t-role">Chef de Partie</div>
+            <div class="t-place">Hotel Le Balze · Riva del Garda 🇮🇹</div>
+            <p class="t-desc" data-i18n="chef.t2">
+              Responsabile della partita dei primi in un resort wellness 4 stelle sul Garda:
+              risotti, pasta fresca e specialità locali ad alto volume.
+            </p>
+          </li>
+          <li class="reveal">
+            <span class="t-period">2021</span>
+            <div class="t-role">Chef de Partie</div>
+            <div class="t-place">Mangia’s · Favignana 🇮🇹</div>
+            <p class="t-desc" data-i18n="chef.t3">Capo partita e turnante in resort.</p>
+          </li>
+          <li class="reveal">
+            <span class="t-period">2020</span>
+            <div class="t-role">Cook</div>
+            <div class="t-place">Laghi’s Deli · Birmingham 🇬🇧</div>
+            <p class="t-desc" data-i18n="chef.t4">Cucina italiana d’esportazione nel Regno Unito.</p>
+          </li>
+          <li class="reveal">
+            <span class="t-period">2019 — 2020</span>
+            <div class="t-role">Sous Chef &amp; Head Chef</div>
+            <div class="t-place">Dal Condor / 7 Scogli · Firenze 🇮🇹</div>
+            <p class="t-desc" data-i18n="chef.t5">
+              Prime esperienze di responsabilità: gestione cucina, menù e brigata.
+            </p>
+          </li>
+          <li class="reveal">
+            <span class="t-period">2018</span>
+            <div class="t-role">Cook</div>
+            <div class="t-place">Grand Hotel Palace · Roma 🇮🇹</div>
+            <p class="t-desc" data-i18n="chef.t6">Capo partita: antipasti e secondi di pesce.</p>
+          </li>
+        </ol>
+
+        <div class="chef-aside">
+          <div class="chef-card reveal">
+            <h3 data-i18n="chef.edu.title">Formazione</h3>
+            <p data-i18n="chef.edu.p1">
+              <strong>Laurea in Arti Culinarie</strong> (EQF 6) — Accademia Italiana di
+              Cucina “Cordon Bleu”, Firenze · accreditata EABHES · 2016–2019.
+            </p>
+            <p data-i18n="chef.edu.p2">
+              Masterclass di haute cuisine con chef stellati, gastronomia molecolare,
+              panificazione con lievito madre, pasticceria e cioccolateria artigianale.
+            </p>
+          </div>
+
+          <div class="chef-card reveal">
+            <h3 data-i18n="chef.spec.title">Specialità</h3>
+            <div class="chef-chips">
+              <span class="chip" data-i18n="chef.c1">Pasta fresca</span>
+              <span class="chip" data-i18n="chef.c2">Griglia Josper</span>
+              <span class="chip" data-i18n="chef.c3">Fine dining</span>
+              <span class="chip" data-i18n="chef.c4">Gastronomia molecolare</span>
+              <span class="chip" data-i18n="chef.c5">Lievito madre</span>
+              <span class="chip" data-i18n="chef.c6">HACCP</span>
+            </div>
+          </div>
+
+          <a class="chef-cta reveal" href="https://www.instagram.com/giovannilacascia/" target="_blank"
+            rel="noreferrer">
+            <span data-i18n="chef.ig">I piatti su Instagram</span> ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Dev section ============ -->
+  <section id="dev" class="dev-zone">
+    <div class="container section">
+      <div class="section-head reveal">
+        <span class="dev-kicker">// side_project_di_una_vita</span>
+        <h2 data-i18n="dev.s.title">Homelab, domotica e open source</h2>
+        <p data-i18n="dev.s.lead">
+          Non sviluppatore di mestiere — appassionato vero. Un Raspberry Pi trasformato
+          in un homelab completo, e la voglia di risolvere problemi reali con software
+          fatto bene.
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="proj featured reveal">
+          <div>
+            <span class="p-badge green">Featured</span>
+            <h3>d2ha — Docker to Home Assistant</h3>
+            <p data-i18n="dev.p1">
+              Monitoraggio e controllo dei container Docker con web UI moderna e
+              autodiscovery MQTT per Home Assistant. Il progetto di punta di Arborae.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn solid" href="https://arborae.github.io/docker2homeassistant/" target="_blank"
+              rel="noreferrer">Docs</a>
+            <a class="dev-btn line" href="https://github.com/arborae/docker2homeassistant" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge green">Co-founder</span>
+            <h3>Arborae</h3>
+            <p data-i18n="dev.p2">
+              Organizzazione open source fondata con Baldo: software pulito, modulare
+              e documentato.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn line" href="https://arborae.github.io/" target="_blank" rel="noreferrer">Sito</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge grey">Tool</span>
+            <h3>feature-overrides-registry</h3>
+            <p data-i18n="dev.p3">
+              Script e tool Windows per sbloccare il supporto sperimentale NVMe nativo,
+              con rollback e release automatiche.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn line" href="https://github.com/giosci1994/feature-overrides-registry" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge wip" data-i18n="dev.wip">In sviluppo</span>
+            <h3>ha-appliance</h3>
+            <p data-i18n="dev.p4">
+              Appliance modulare per Home Assistant: deploy semplificato, wizard e App
+              Store per container.
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn line" href="https://github.com/arborae/ha-appliance" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge wip" data-i18n="dev.wip2">In sviluppo</span>
+            <h3 data-i18n="dev.p5.title">Web-App Palestra</h3>
+            <p data-i18n="dev.p5">
+              Gestione schede e allenamenti in palestra. In cottura a bassa temperatura:
+              non ancora pubblica.
+            </p>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div>
+            <span class="p-badge grey">Self-hosted</span>
+            <h3>Homelab</h3>
+            <p data-i18n="dev.p6">
+              Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud,
+              WireGuard, tunnel Cloudflare e molto altro — tutto in casa.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a class="social" href="https://github.com/giosci1994" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a11 11 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+          </svg>
+        </a>
+        <a class="social" href="https://www.linkedin.com/in/giovannilacascia/" target="_blank" rel="noreferrer"
+          aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z" />
+          </svg>
+        </a>
+        <a class="social" href="https://www.instagram.com/giovannilacascia/" target="_blank" rel="noreferrer"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-note">
+        <span>© <span id="year">2026</span> Giovanni La Cascia · </span>
+        <span class="mono" data-i18n="footer.note">fatto con ❤️ tra fornelli e container</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---------- i18n ----------
+    const I18N = {
+      it: {
+        'chef.kicker': 'di giorno',
+        'chef.title': 'Lo Chef',
+        'chef.tagline': 'Fine dining italiano, pasta fresca fatta a mano e griglia a carbone. Da Roma a Copenhagen, passando per Firenze e la Sicilia.',
+        'chef.cta': 'Il percorso in cucina',
+        'dev.kicker': '// di notte',
+        'dev.title': 'Il Dev',
+        'dev.tagline': 'IT enthusiast · Homelab & Automation. Container, domotica e software open source nati da problemi veri di casa.',
+        'dev.cta': './progetti',
+        'hero.sub': 'chef di professione · dev per passione',
+        'chef.s.kicker': 'La cucina',
+        'chef.s.title': 'Dieci anni tra i fornelli',
+        'chef.s.lead': 'Laureato in Arti Culinarie all’Accademia Italiana di Cucina di Firenze, ho cucinato in hotel cinque stelle, ristoranti fine dining e resort — dall’Italia al Regno Unito, fino alla Danimarca.',
+        'chef.t1': 'Pasta artigianale prodotta ogni giorno (pappardelle, gnudi, gnocchi), cotture alla griglia a carbone Josper, materie prime da piccoli produttori italiani.',
+        'chef.t2': 'Responsabile della partita dei primi in un resort wellness 4 stelle sul Garda: risotti, pasta fresca e specialità locali ad alto volume.',
+        'chef.t3': 'Capo partita e turnante in resort.',
+        'chef.t4': 'Cucina italiana d’esportazione nel Regno Unito.',
+        'chef.t5': 'Prime esperienze di responsabilità: gestione cucina, menù e brigata.',
+        'chef.t6': 'Capo partita: antipasti e secondi di pesce.',
+        'chef.edu.title': 'Formazione',
+        'chef.edu.p1': '<strong>Laurea in Arti Culinarie</strong> (EQF 6) — Accademia Italiana di Cucina “Cordon Bleu”, Firenze · accreditata EABHES · 2016–2019.',
+        'chef.edu.p2': 'Masterclass di haute cuisine con chef stellati, gastronomia molecolare, panificazione con lievito madre, pasticceria e cioccolateria artigianale.',
+        'chef.spec.title': 'Specialità',
+        'chef.c1': 'Pasta fresca', 'chef.c2': 'Griglia Josper', 'chef.c3': 'Fine dining',
+        'chef.c4': 'Gastronomia molecolare', 'chef.c5': 'Lievito madre', 'chef.c6': 'HACCP',
+        'chef.ig': 'I piatti su Instagram',
+        'dev.s.title': 'Homelab, domotica e open source',
+        'dev.s.lead': 'Non sviluppatore di mestiere — appassionato vero. Un Raspberry Pi trasformato in un homelab completo, e la voglia di risolvere problemi reali con software fatto bene.',
+        'dev.p1': 'Monitoraggio e controllo dei container Docker con web UI moderna e autodiscovery MQTT per Home Assistant. Il progetto di punta di Arborae.',
+        'dev.p2': 'Organizzazione open source fondata con Baldo: software pulito, modulare e documentato.',
+        'dev.p3': 'Script e tool Windows per sbloccare il supporto sperimentale NVMe nativo, con rollback e release automatiche.',
+        'dev.p4': 'Appliance modulare per Home Assistant: deploy semplificato, wizard e App Store per container.',
+        'dev.wip': 'In sviluppo', 'dev.wip2': 'In sviluppo',
+        'dev.p5.title': 'Web-App Palestra',
+        'dev.p5': 'Gestione schede e allenamenti in palestra. In cottura a bassa temperatura: non ancora pubblica.',
+        'dev.p6': 'Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, tunnel Cloudflare e molto altro — tutto in casa.',
+        'footer.note': 'fatto con ❤️ tra fornelli e container',
+        '_meta.title': 'Giovanni La Cascia — Chef & Dev',
+        '_meta.desc': 'Giovanni La Cascia — Chef & IT enthusiast. Fine dining italiano di giorno, homelab e automazioni di notte.'
+      },
+      en: {
+        'chef.kicker': 'by day',
+        'chef.title': 'The Chef',
+        'chef.tagline': 'Italian fine dining, handmade fresh pasta and charcoal grilling. From Rome to Copenhagen, via Florence and Sicily.',
+        'chef.cta': 'My journey in the kitchen',
+        'dev.kicker': '// by night',
+        'dev.title': 'The Dev',
+        'dev.tagline': 'IT enthusiast · Homelab & Automation. Containers, home automation and open-source software born from real household problems.',
+        'dev.cta': './projects',
+        'hero.sub': 'chef by trade · dev by passion',
+        'chef.s.kicker': 'The kitchen',
+        'chef.s.title': 'Ten years behind the stove',
+        'chef.s.lead': 'With a Bachelor’s in Culinary Arts from the Italian Culinary Academy in Florence, I have cooked in five-star hotels, fine dining restaurants and resorts — across Italy, the UK and Denmark.',
+        'chef.t1': 'Artisanal pasta made daily (pappardelle, gnudi, gnocchi), Josper charcoal grill cooking, ingredients from small Italian producers.',
+        'chef.t2': 'Ran the primi piatti station at a 4-star wellness resort on Lake Garda: risottos, fresh pasta and local specialities at high volume.',
+        'chef.t3': 'Chef de partie and tournant at a resort.',
+        'chef.t4': 'Italian cuisine abroad, in the UK.',
+        'chef.t5': 'First leadership roles: running the kitchen, menus and brigade.',
+        'chef.t6': 'Station chef: appetizers and fish mains.',
+        'chef.edu.title': 'Education',
+        'chef.edu.p1': '<strong>Bachelor’s Degree in Culinary Arts</strong> (EQF 6) — Italian Culinary Academy “Cordon Bleu”, Florence · EABHES accredited · 2016–2019.',
+        'chef.edu.p2': 'Haute cuisine masterclasses with Michelin-starred chefs, molecular gastronomy, sourdough baking, pastry and artisanal chocolaterie.',
+        'chef.spec.title': 'Specialities',
+        'chef.c1': 'Fresh pasta', 'chef.c2': 'Josper grill', 'chef.c3': 'Fine dining',
+        'chef.c4': 'Molecular gastronomy', 'chef.c5': 'Sourdough', 'chef.c6': 'HACCP',
+        'chef.ig': 'My dishes on Instagram',
+        'dev.s.title': 'Homelab, home automation & open source',
+        'dev.s.lead': 'Not a developer by trade — a true enthusiast. A Raspberry Pi turned into a full homelab, and the urge to solve real problems with well-crafted software.',
+        'dev.p1': 'Monitor and control Docker containers with a modern web UI and MQTT autodiscovery for Home Assistant. Arborae’s flagship project.',
+        'dev.p2': 'Open-source organization founded with Baldo: clean, modular, documented software.',
+        'dev.p3': 'Windows scripts and tools to unlock experimental native NVMe support, with rollback and automated releases.',
+        'dev.p4': 'Modular appliance for Home Assistant: simplified deploys, wizards and a container App Store.',
+        'dev.wip': 'In progress', 'dev.wip2': 'In progress',
+        'dev.p5.title': 'Gym Web-App',
+        'dev.p5': 'Workout plans and training management. Slow-cooking sous-vide: not public yet.',
+        'dev.p6': 'Raspberry Pi running Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, Cloudflare tunnels and much more — all self-hosted.',
+        'footer.note': 'made with ❤️ between stoves and containers',
+        '_meta.title': 'Giovanni La Cascia — Chef & Dev',
+        '_meta.desc': 'Giovanni La Cascia — Chef & IT enthusiast. Italian fine dining by day, homelab and automation by night.'
+      }
+    };
+
+    const htmlKeys = new Set(['chef.edu.p1', 'chef.edu.p2']);
+
+    function setLang(lang) {
+      const dict = I18N[lang] || I18N.it;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (!(key in dict)) return;
+        if (htmlKeys.has(key)) el.innerHTML = dict[key];
+        else el.textContent = dict[key];
+      });
+      document.title = dict['_meta.title'];
+      const md = document.querySelector('meta[name="description"]');
+      if (md) md.setAttribute('content', dict['_meta.desc']);
+      document.getElementById('lang-it').classList.toggle('active', lang === 'it');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      try { localStorage.setItem('lang', lang); } catch (e) { }
+    }
+
+    document.getElementById('lang-it').addEventListener('click', () => setLang('it'));
+    document.getElementById('lang-en').addEventListener('click', () => setLang('en'));
+
+    let saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) { }
+    if (saved === 'en') setLang('en');
+
+    // ---------- misc ----------
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      reveals.forEach(el => el.classList.add('visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(el => io.observe(el));
+    }
+  </script>
+</body>
+
+</html>
