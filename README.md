@@ -122,10 +122,10 @@ dictionary next to `it` / `en` and a matching button — no other file changes.
 
 ## 📄 License
 
-The **source code** (HTML/CSS/JS) is released under the [MIT License](LICENSE) —
+The **source code** (HTML/CSS/JS) is released under the [GNU GPLv3 License](LICENSE) —
 feel free to reuse the structure and the i18n approach.
 
-> ℹ️ **Not covered by MIT:** the personal photographs (`giovanni-*.webp`), the
+> ℹ️ **Not covered by GPLv3:** the personal photographs (`giovanni-*.webp`), the
 > biographical/career content and the personal branding are © Giovanni La Cascia,
 > all rights reserved. Please don't reuse those as your own.
 
@@ -206,9 +206,9 @@ pulsante corrispondente.
 
 ## 📄 Licenza
 
-Il **codice sorgente** (HTML/CSS/JS) è rilasciato con [licenza MIT](LICENSE).
+Il **codice sorgente** (HTML/CSS/JS) è rilasciato con [licenza GNU GPLv3](LICENSE).
 
-> ℹ️ **Non coperti da MIT:** le foto personali (`giovanni-*.webp`), i contenuti
+> ℹ️ **Non coperti da GPLv3:** le foto personali (`giovanni-*.webp`), i contenuti
 > biografici e il personal branding sono © Giovanni La Cascia, tutti i diritti
 > riservati.
 
