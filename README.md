@@ -12,6 +12,7 @@ dining, and a homelab full of containers and home-automation projects.
   <img src="https://img.shields.io/badge/build-no%20build%20step-informational" alt="No build step" />
   <img src="https://img.shields.io/badge/i18n-IT%20%C2%B7%20EN-8a63d2" alt="Bilingual IT/EN" />
   <a href="LICENSE"><img src="https://img.shields.io/github/license/giosci1994/giosci1994.github.io" alt="License" /></a>
+  <a href="https://buymeacoffee.com/giosci1994u"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
 </p>
 
 <p align="center">
@@ -120,6 +121,12 @@ dictionary next to `it` / `en` and a matching button — no other file changes.
 
 ---
 
+## ☕ Support
+
+If the site or one of my projects is useful to you, you can buy me a coffee.
+
+<a href="https://buymeacoffee.com/giosci1994u"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="45" alt="Buy Me a Coffee" /></a>
+
 ## 📄 License
 
 The **source code** (HTML/CSS/JS) is released under the [GNU GPLv3 License](LICENSE) —
@@ -203,6 +210,12 @@ traducibile ha un attributo `data-i18n="chiave"` e lo script sostituisce il test
 in base alla lingua scelta, localizzando anche `<title>` e meta description. Per
 **aggiungere una lingua** basta un nuovo dizionario accanto a `it` / `en` e un
 pulsante corrispondente.
+
+## ☕ Supporta il progetto
+
+Se il sito o uno dei miei progetti ti è utile, puoi offrirmi un caffè.
+
+<a href="https://buymeacoffee.com/giosci1994u"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="45" alt="Buy Me a Coffee" /></a>
 
 ## 📄 Licenza
 
