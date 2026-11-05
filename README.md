@@ -58,15 +58,19 @@ dining, and a homelab full of containers and home-automation projects.
 
 ```
 index.html          split-screen chooser: two souls, two pages
-chef.html           the kitchen journey (warm paper/amber theme, serif)
+chef.html           the kitchen journey: a 3D cutting board of order tickets (warm paper/amber theme, serif)
 dev.html            homelab & open-source projects (dark green/teal theme, mono)
 style.css           shared dual-theme stylesheet
 assets/
   i18n.js           IT/EN translations (data-i18n keys) + shared boot logic
+  chef-board.js     the cutting-board timeline on chef.html (scroll-driven CSS 3D, flat fallback)
+  wood-board.webp   wood texture of the board
   favicon.svg       site icon
   giovanni-chef.webp / giovanni-dev.webp   portraits
   social-preview.png / social-preview.html   Open Graph image (+ its source)
 google*.html        Google Search Console verification file
+tools/
+  make-wood-texture.py   regenerates assets/wood-board.webp (needs numpy + Pillow; not used by the site)
 ```
 
 ---
@@ -177,10 +181,12 @@ italiano e un homelab pieno di container e progetti di domotica.
 ## 🧩 Struttura
 
 - `index.html` — chooser split-screen: due anime, due pagine
-- `chef.html` — il percorso in cucina (tema caldo carta/ambra, serif)
+- `chef.html` — il percorso in cucina: un tagliere in 3D con le comande (tema caldo carta/ambra, serif)
 - `dev.html` — homelab e progetti open source (tema scuro verde/teal, mono)
 - `style.css` — dual-theme condiviso
 - `assets/i18n.js` — traduzioni IT/EN (chiavi `data-i18n`) + boot comune
+- `assets/chef-board.js` + `assets/wood-board.webp` — il tagliere della pagina Chef (CSS 3D guidato dallo scroll, con versione piatta di riserva)
+- `tools/make-wood-texture.py` — rigenera la texture del legno (serve numpy + Pillow; il sito non lo usa)
 
 ## 🛠️ Avvio in locale
 

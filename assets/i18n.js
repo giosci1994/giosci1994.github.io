@@ -28,9 +28,18 @@
       'chef.t5b': 'Capo partita in un ristorante di pesce fiorentino.',
       'chef.r5b': 'Capo Partita',
       'chef.t6': 'Capo partita: antipasti e secondi di pesce.',
-      'chef.edu.title': 'Formazione',
-      'chef.edu.p1': '<strong>Laurea in Arti Culinarie</strong> (EQF 6) — Accademia Italiana di Cucina “Cordon Bleu”, Firenze · accreditata EABHES · 2016–2019.',
-      'chef.edu.p2': 'Masterclass di haute cuisine con chef stellati, gastronomia molecolare, panificazione con lievito madre, pasticceria e cioccolateria artigianale.',
+      'chef.r6': 'Cuoco',
+      // --- tagliere delle comande ---
+      'chef.board.school': 'Scuola',
+      'chef.board.since': 'DAL 2016',
+      'chef.board.hint': 'Scorri',
+      'chef.city.firenze': 'Firenze',
+      'chef.city.roma': 'Roma',
+      'chef.edu.role': 'Laurea in Arti Culinarie',
+      'chef.edu.place': 'Accademia Italiana di Cucina “Cordon Bleu”',
+      'chef.edu.ticket': 'EQF 6, accreditata EABHES. Masterclass con chef stellati, gastronomia molecolare, lievito madre, pasticceria e cioccolateria.',
+      'chef.contact.title': 'Contatti',
+      'chef.contact.text': 'Cerchi un cuoco per la tua brigata, un evento o una collaborazione? Scrivimi.',
       'chef.spec.title': 'Specialità',
       'chef.c1': 'Pasta fresca', 'chef.c2': 'Griglia Josper', 'chef.c3': 'Fine dining',
       'chef.c4': 'Gastronomia molecolare', 'chef.c5': 'Lievito madre', 'chef.c6': 'HACCP',
@@ -87,9 +96,17 @@
       'chef.t5b': 'Chef de partie at a Florentine seafood restaurant.',
       'chef.r5b': 'Chef de Partie',
       'chef.t6': 'Station chef: appetizers and fish mains.',
-      'chef.edu.title': 'Education',
-      'chef.edu.p1': '<strong>Bachelor’s Degree in Culinary Arts</strong> (EQF 6) — Italian Culinary Academy “Cordon Bleu”, Florence · EABHES accredited · 2016–2019.',
-      'chef.edu.p2': 'Haute cuisine masterclasses with Michelin-starred chefs, molecular gastronomy, sourdough baking, pastry and artisanal chocolaterie.',
+      'chef.r6': 'Cook',
+      'chef.board.school': 'School',
+      'chef.board.since': 'SINCE 2016',
+      'chef.board.hint': 'Scroll',
+      'chef.city.firenze': 'Florence',
+      'chef.city.roma': 'Rome',
+      'chef.edu.role': 'Bachelor’s in Culinary Arts',
+      'chef.edu.place': 'Italian Culinary Academy “Cordon Bleu”',
+      'chef.edu.ticket': 'EQF 6, EABHES accredited. Masterclasses with Michelin-starred chefs, molecular gastronomy, sourdough, pastry and artisanal chocolate.',
+      'chef.contact.title': 'Contact',
+      'chef.contact.text': 'Looking for a chef for your brigade, an event or a collaboration? Get in touch.',
       'chef.spec.title': 'Specialities',
       'chef.c1': 'Fresh pasta', 'chef.c2': 'Josper grill', 'chef.c3': 'Fine dining',
       'chef.c4': 'Molecular gastronomy', 'chef.c5': 'Sourdough', 'chef.c6': 'HACCP',
@@ -122,7 +139,7 @@
     }
   };
 
-  const HTML_KEYS = new Set(['chef.edu.p1', 'chef.edu.p2']);
+  const HTML_KEYS = new Set([]);
   const PAGE = document.body.dataset.page || 'home';
 
   function setLang(lang) {
@@ -142,6 +159,8 @@
     if (bIt) bIt.classList.toggle('active', lang === 'it');
     if (bEn) bEn.classList.toggle('active', lang === 'en');
     try { localStorage.setItem('lang', lang); } catch (e) { }
+    // chi ha testi che cambiano misura (il tagliere della pagina Chef) si ricalcola
+    document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
   }
 
   const bIt = document.getElementById('lang-it');
