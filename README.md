@@ -65,6 +65,8 @@ assets/
   i18n.js           IT/EN translations (data-i18n keys) + shared boot logic
   chef-board.js     the cutting-board timeline on chef.html (scroll-driven CSS 3D, flat fallback)
   wood-board.webp   wood texture of the board
+  chef-plates.js    the dish gallery (zoom view) and the behind-the-scenes clips on chef.html
+  piatti/           dish photos (NN.webp 1080 px, NN-540.webp for the grid) and the two muted clips with posters
   favicon.svg       site icon
   giovanni-chef.webp / giovanni-dev.webp   portraits
   social-preview.png / social-preview.html   Open Graph image (+ its source)
@@ -186,6 +188,7 @@ italiano e un homelab pieno di container e progetti di domotica.
 - `style.css` — dual-theme condiviso
 - `assets/i18n.js` — traduzioni IT/EN (chiavi `data-i18n`) + boot comune
 - `assets/chef-board.js` + `assets/wood-board.webp` — il tagliere della pagina Chef (CSS 3D guidato dallo scroll, con versione piatta di riserva)
+- `assets/chef-plates.js` + `assets/piatti/` — la galleria dei piatti con ingrandimento e i video "Dietro le quinte" (foto 1080 px e 540 px per la griglia, video muti con copertina)
 - `tools/make-wood-texture.py` — rigenera la texture del legno (serve numpy + Pillow; il sito non lo usa)
 
 ## 🛠️ Avvio in locale

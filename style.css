@@ -557,6 +557,289 @@ body.dev-page { background: var(--dark); color: var(--dark-text); }
 
 .chef-link:hover { border-color: rgba(165, 107, 33, 0.5); transform: translateY(-2px); }
 
+/* ============ Chef: i piatti e dietro le quinte ============ */
+.chef-plates { padding-bottom: 0; }
+
+.plates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 12px;
+}
+
+/* la griglia non sfuma tutta insieme: entrano i riquadri, uno dopo l'altro */
+.plates.reveal { opacity: 1; transform: none; }
+
+.plate {
+  aspect-ratio: 1 / 1;
+  min-width: 0;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: calc(min(var(--i, 0), 10) * 45ms);
+}
+
+.plates.visible .plate { opacity: 1; transform: none; }
+
+.plate.big { grid-column: span 2; grid-row: span 2; }
+
+.plate-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper-soft);
+  cursor: zoom-in;
+}
+
+.plate-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(60, 42, 20, 0.08);
+  pointer-events: none;
+}
+
+.plate-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (hover: hover) {
+  .plate-link:hover img { transform: scale(1.05); }
+}
+
+.plate-link:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+.behind { margin-top: 64px; }
+
+.behind-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 24px;
+  margin-bottom: 18px;
+}
+
+.behind-head h3 { font-family: var(--font-serif); font-weight: 600; font-size: 1.35rem; }
+.behind-head p { margin: 0; color: var(--ink-muted); font-size: 0.95rem; }
+
+/* colonne in proporzione 16:9 e 9:16, così i due video hanno la stessa altezza */
+.clips {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7778fr) minmax(0, 0.5625fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.clip { margin: 0; min-width: 0; }
+
+.clip-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #1b140d;
+}
+
+.clip video { display: block; width: 100%; height: auto; cursor: pointer; }
+
+.clip figcaption {
+  margin-top: 10px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.clip-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 15, 10, 0.58);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clip-toggle:hover { background: rgba(20, 15, 10, 0.78); }
+.clip-toggle:focus-visible { outline: 2px solid var(--amber-soft); outline-offset: 3px; }
+
+/* triangolo: riproduci */
+.clip-toggle::before {
+  content: '';
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-style: solid;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* due barre: pausa */
+.clip.playing .clip-toggle::before {
+  width: 12px;
+  height: 14px;
+  margin: 0;
+  border: 0;
+  background: linear-gradient(90deg, #fff 0 4px, transparent 4px 8px, #fff 8px 12px);
+}
+
+/* ---- ingrandimento ---- */
+html.lb-open { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: transparent;
+  color: #fff;
+}
+
+.lightbox::backdrop {
+  background: rgba(18, 13, 8, 0.93);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.lb-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 88px;
+}
+
+.lightbox[open] .lb-stage { animation: lb-in 0.28s ease both; }
+
+@keyframes lb-in { from { opacity: 0; transform: scale(0.97); } }
+
+.lb-img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.65);
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: pan-y;
+}
+
+.lb-btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lb-btn:hover { background: rgba(255, 255, 255, 0.18); }
+.lb-btn:focus-visible { outline: 2px solid var(--amber-soft); outline-offset: 3px; }
+
+.lb-close { top: 16px; right: 16px; }
+
+.lb-close::before,
+.lb-close::after {
+  content: '';
+  grid-area: 1 / 1;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.lb-close::after { transform: rotate(-45deg); }
+
+.lb-prev,
+.lb-next { top: 50%; transform: translateY(-50%); }
+
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+
+.lb-prev::before,
+.lb-next::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  border: solid #fff;
+}
+
+.lb-prev::before { margin-left: 5px; border-width: 0 0 2px 2px; transform: rotate(45deg); }
+.lb-next::before { margin-right: 5px; border-width: 2px 2px 0 0; transform: rotate(45deg); }
+
+.lb-count {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 900px) {
+  .plates { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .clips { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  /* il verticale non deve riempire tutto lo schermo del telefono */
+  .clip.tall { width: min(100%, 320px, 72svh * 9 / 16); justify-self: center; }
+}
+
+@media (max-width: 640px) {
+  .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .plate-link { border-radius: 12px; }
+  .behind { margin-top: 48px; }
+  .lb-stage { padding: 60px 10px 76px; }
+  .lb-prev,
+  .lb-next { top: auto; bottom: 14px; transform: none; }
+  .lb-prev { left: 16px; }
+  .lb-next { right: 16px; }
+  .lb-count { bottom: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plate { opacity: 1; transform: none; transition: none; }
+  .plate-link img { transition: none; }
+  .lightbox[open] .lb-stage { animation: none; }
+}
+
 /* ============ Chef: il tagliere delle comande ============
    Base (senza JavaScript o con il movimento ridotto): tagliere piatto, le comande si scorrono di lato.
    .live (aggiunta da assets/chef-board.js): la sezione resta ferma sullo schermo, lo scroll fa

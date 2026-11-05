@@ -44,6 +44,36 @@
       'chef.c1': 'Pasta fresca', 'chef.c2': 'Griglia Josper', 'chef.c3': 'Fine dining',
       'chef.c4': 'Gastronomia molecolare', 'chef.c5': 'Lievito madre', 'chef.c6': 'HACCP',
       'chef.ig': 'I piatti su Instagram',
+      'chef.plates.kicker': 'Dal pass',
+      'chef.plates.title': 'I piatti',
+      'chef.plates.lead': 'Una selezione dei piatti che ho cucinato negli anni, dalla scuola alle brigate. Tocca una foto per vederla intera.',
+      'chef.behind.title': 'Dietro le quinte',
+      'chef.behind.lead': 'La parte che in sala non si vede: macelleria e preparazioni.',
+      'chef.v1': 'Sezionatura di mezzo maiale',
+      'chef.v2': 'Dal cosciotto allo spezzatino',
+      'chef.clip.play': 'Riproduci',
+      'chef.clip.pause': 'Metti in pausa',
+      'chef.lb.close': 'Chiudi',
+      'chef.lb.prev': 'Foto precedente',
+      'chef.lb.next': 'Foto successiva',
+      'chef.p01': 'Risotto al pomodoro con peperoni, spuma e basilico',
+      'chef.p02': 'Tartare di gambero con frutta secca e carota',
+      'chef.p03': 'Ravioli neri su crema bianca con frutta secca tostata',
+      'chef.p04': 'Carne e capasanta con funghi su crema arancione',
+      'chef.p05': 'Vellutata con guarnizioni croccanti e melograno',
+      'chef.p06': 'Pesce fritto con insalata riccia su salsa arancione, in piatto di vetro',
+      'chef.p07': 'Salmone su crema di barbabietola con grissino',
+      'chef.p08': 'Carne brasata con verdure e fondo bruno',
+      'chef.p09': 'Rotolo di carne con frutta, purè e fondo',
+      'chef.p10': 'Filetto in crosta su crema chiara, con verdure a cubetti e aneto',
+      'chef.p11': 'Tortino a strati di salmone e avocado su piatto turchese',
+      'chef.p12': 'Sfera croccante su purè, con spuma e olio verde',
+      'chef.p13': 'Gnocchetti gialli con sfoglia sottile, funghi e crumble',
+      'chef.p14': 'Spaghetti al salmone con aneto e frutti di bosco',
+      'chef.p15': 'Dessert con gelato, gelatina di frutta e menta',
+      'chef.p16': 'Semifreddo arrotolato con cuore di fragola e spirale di zucchero',
+      'chef.p17': 'Frutto glassato su pietra lavica',
+      'chef.p18': 'Piccola pasticceria: cupola al cioccolato e mousse con ribes',
       // --- dev page ---
       'dev.s.title': 'Homelab, domotica e open source',
       'dev.s.lead': 'Non sviluppatore di mestiere — appassionato vero. Un homelab completo, nato su un Raspberry Pi e oggi su un mini PC Intel N150, e la voglia di risolvere problemi reali con software fatto bene.',
@@ -111,6 +141,36 @@
       'chef.c1': 'Fresh pasta', 'chef.c2': 'Josper grill', 'chef.c3': 'Fine dining',
       'chef.c4': 'Molecular gastronomy', 'chef.c5': 'Sourdough', 'chef.c6': 'HACCP',
       'chef.ig': 'My dishes on Instagram',
+      'chef.plates.kicker': 'From the pass',
+      'chef.plates.title': 'The plates',
+      'chef.plates.lead': 'A selection of dishes I have cooked over the years, from culinary school to the brigades. Tap a photo to see it in full.',
+      'chef.behind.title': 'Behind the scenes',
+      'chef.behind.lead': 'The part guests never see: butchery and prep.',
+      'chef.v1': 'Breaking down half a pig',
+      'chef.v2': 'From leg to stew',
+      'chef.clip.play': 'Play',
+      'chef.clip.pause': 'Pause',
+      'chef.lb.close': 'Close',
+      'chef.lb.prev': 'Previous photo',
+      'chef.lb.next': 'Next photo',
+      'chef.p01': 'Tomato risotto with peppers, foam and basil',
+      'chef.p02': 'Prawn tartare with nuts and carrot',
+      'chef.p03': 'Black ravioli on a white cream with toasted nuts',
+      'chef.p04': 'Meat and scallop with mushrooms on an orange purée',
+      'chef.p05': 'Velouté with crispy garnishes and pomegranate',
+      'chef.p06': 'Fried fish with frisée on an orange sauce, in a glass bowl',
+      'chef.p07': 'Salmon on beetroot purée with a breadstick',
+      'chef.p08': 'Braised meat with vegetables and jus',
+      'chef.p09': 'Meat roulade with fruit, mash and jus',
+      'chef.p10': 'Crusted fillet on a light purée, with diced vegetables and dill',
+      'chef.p11': 'Layered salmon and avocado stack on a turquoise plate',
+      'chef.p12': 'Crispy sphere on mash, with foam and green oil',
+      'chef.p13': 'Yellow gnocchetti with a thin pasta sheet, mushrooms and crumble',
+      'chef.p14': 'Spaghetti with salmon, dill and berries',
+      'chef.p15': 'Dessert with ice cream, fruit jelly and mint',
+      'chef.p16': 'Rolled semifreddo with a strawberry heart and a sugar spiral',
+      'chef.p17': 'Glazed fruit on lava stone',
+      'chef.p18': 'Petits gâteaux: chocolate dome and mousses with redcurrants',
       'dev.s.title': 'Homelab, home automation & open source',
       'dev.s.lead': 'Not a developer by trade — a true enthusiast. A full homelab that started on a Raspberry Pi and now runs on an Intel N150 mini PC, and the urge to solve real problems with well-crafted software.',
       'dev.p1': 'Monitor and control Docker containers with a modern web UI and MQTT autodiscovery for Home Assistant. Arborae’s flagship project.',
@@ -140,6 +200,8 @@
   };
 
   const HTML_KEYS = new Set([]);
+  // per gli script di pagina che compongono testi al volo (es. Riproduci/Pausa)
+  window.siteT = key => (I18N[document.documentElement.lang] || I18N.it)[key];
   const PAGE = document.body.dataset.page || 'home';
 
   function setLang(lang) {
@@ -150,6 +212,15 @@
       if (!(key in dict)) return;
       if (HTML_KEYS.has(key)) el.innerHTML = dict[key];
       else el.textContent = dict[key];
+    });
+    // testi alternativi ed etichette per i lettori di schermo
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.getAttribute('data-i18n-alt');
+      if (key in dict) el.setAttribute('alt', dict[key]);
+    });
+    document.querySelectorAll('[data-i18n-label]').forEach(el => {
+      const key = el.getAttribute('data-i18n-label');
+      if (key in dict) el.setAttribute('aria-label', dict[key]);
     });
     document.title = dict['_meta.title.' + PAGE];
     const md = document.querySelector('meta[name="description"]');
