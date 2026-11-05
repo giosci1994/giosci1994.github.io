@@ -48,10 +48,71 @@
       IT enthusiast · Homelab &amp; Automation. Container, domotica e
       software open source nati da problemi veri di casa.
     </p>
+    <button class="term-open" type="button" id="term-open" hidden>
+      <kbd>~</kbd><span data-i18n="dev.term.open">apri il terminale</span>
+    </button>
   </section>
 
   <section class="dev-zone">
-    <div class="container section">
+    <div class="container section lab-intro">
+      <div class="section-head reveal">
+        <span class="dev-kicker">// homelab.map</span>
+        <h2 id="lab-title" data-i18n="dev.lab.title">Come gira casa mia</h2>
+        <p data-i18n="dev.lab.lead">Un mini PC, qualche container e tanti messaggi MQTT. Scorri: i pezzi si accendono uno alla volta e i dati iniziano a viaggiare.</p>
+      </div>
+    </div>
+
+    <section class="lab" id="lab" aria-labelledby="lab-title">
+      <div class="lab-sticky">
+        <div class="container lab-grid">
+          <div class="lab-panel">
+            <ol class="lab-steps" id="lab-steps">
+              <li class="lab-step" data-on="host rpi" data-now="host" data-edges="rpi-host">
+                <h3 data-i18n="dev.lab.s1.t">Il mini PC</h3>
+                <p data-i18n="dev.lab.s1">Un Intel N150 acceso giorno e notte, con ogni servizio nel suo container Docker. Tutto è partito da un Raspberry Pi.</p>
+              </li>
+              <li class="lab-step" data-on="ha casa" data-now="ha" data-edges="casa-ha">
+                <h3>Home Assistant</h3>
+                <p data-i18n="dev.lab.s2">Il cervello della casa: legge i sensori, accende le luci, fa partire le automazioni.</p>
+              </li>
+              <li class="lab-step" data-on="mqtt" data-now="mqtt" data-edges="ha-mqtt">
+                <h3 data-i18n="dev.lab.s3.t">Broker MQTT</h3>
+                <p data-i18n="dev.lab.s3">Il postino. Ogni servizio pubblica e ascolta messaggi su argomenti, senza dover conoscere gli altri.</p>
+              </li>
+              <li class="lab-step" data-on="d2ha" data-now="d2ha" data-edges="d2ha-mqtt">
+                <h3>d2ha</h3>
+                <p data-i18n="dev.lab.s4">Il progetto di punta di Arborae: ogni container Docker entra in Home Assistant con l’autodiscovery MQTT. Stato, risorse, avvio e stop da un’unica dashboard.</p>
+                <a href="https://github.com/arborae/docker2homeassistant" target="_blank" rel="noreferrer">Repo ↗</a>
+              </li>
+              <li class="lab-step" data-on="pc" data-now="pc" data-edges="mqtt-pc">
+                <h3>PC-MQTT-Notifier</h3>
+                <p data-i18n="dev.lab.s5">Le notifiche della casa arrivano sul PC Windows, in sovrimpressione sopra tutto il resto.</p>
+                <a href="https://github.com/giosci1994/PC-MQTT-Notifier" target="_blank" rel="noreferrer">Repo ↗</a>
+              </li>
+              <li class="lab-step" data-on="floor" data-now="floor" data-edges="ha-floor">
+                <h3>floor3d-card</h3>
+                <p data-i18n="dev.lab.s6">La casa in 3D dentro la dashboard: ogni stanza si colora con i suoi sensori. È nella lista ufficiale di HACS.</p>
+                <a href="https://github.com/giosci1994/floor3d-card" target="_blank" rel="noreferrer">Repo ↗</a>
+              </li>
+              <li class="lab-step" data-on="net traefik nextcloud" data-now="traefik net" data-edges="net-traefik traefik-nextcloud traefik-ha">
+                <h3 data-i18n="dev.lab.s7.t">Traefik e il tunnel</h3>
+                <p data-i18n="dev.lab.s7">Il tunnel Cloudflare porta i servizi fuori casa senza aprire porte sul router. Traefik smista ogni richiesta al container giusto, Nextcloud compreso.</p>
+              </li>
+              <li class="lab-step" data-on="pihole wireguard" data-now="pihole wireguard" data-edges="">
+                <h3>Pi-hole &amp; WireGuard</h3>
+                <p data-i18n="dev.lab.s8">Pi-hole filtra pubblicità e tracker per tutta la rete di casa. WireGuard è la VPN per rientrare quando sono fuori.</p>
+              </li>
+            </ol>
+            <div class="lab-dots" id="lab-dots" role="group" aria-label="Passi della mappa" data-i18n-label="dev.lab.dots"></div>
+          </div>
+          <div class="lab-view" id="lab-view">
+            <svg class="lab-map" id="lab-map" role="img" aria-labelledby="lab-title"></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container section dev-projects">
       <div class="section-head reveal">
         <span class="dev-kicker">// side_project_di_una_vita</span>
         <h2 data-i18n="dev.s.title">Homelab, domotica e open source</h2>
@@ -62,8 +123,16 @@
         </p>
       </div>
 
-      <div class="projects">
-        <article class="proj featured reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1138617227/3a5c7aaa-40fa-42b5-b54a-8ecfa537fca4');">
+      <div class="proj-filters" id="proj-filters" role="group" aria-label="Filtra i progetti" data-i18n-label="dev.f.label" hidden>
+        <button type="button" data-k="all" aria-pressed="true"><span data-i18n="dev.f.all">Tutti</span><b></b></button>
+        <button type="button" data-k="ha" aria-pressed="false"><span>Home Assistant</span><b></b></button>
+        <button type="button" data-k="web" aria-pressed="false"><span data-i18n="dev.f.web">Web app</span><b></b></button>
+        <button type="button" data-k="win" aria-pressed="false"><span>Windows</span><b></b></button>
+        <button type="button" data-k="games" aria-pressed="false"><span data-i18n="dev.f.games">Giochi</span><b></b></button>
+      </div>
+
+      <div class="projects" id="projects">
+        <article class="proj featured reveal" data-cats="" style="--bg-img: url('https://repository-images.githubusercontent.com/1138617227/3a5c7aaa-40fa-42b5-b54a-8ecfa537fca4');">
           <div>
             <span class="p-badge green">Featured</span>
             <h3>Arborae</h3>
@@ -78,7 +147,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1100962339/27733d83-311e-43c6-b649-0aee4e047c6d');">
+        <article class="proj reveal" data-cats="ha" style="--bg-img: url('https://repository-images.githubusercontent.com/1100962339/27733d83-311e-43c6-b649-0aee4e047c6d');">
           <div>
             <span class="p-badge green">Docker / HA</span>
             <h3>d2ha — Docker to Home Assistant</h3>
@@ -95,7 +164,7 @@
           </div>
         </article>
 
-        <article class="proj wide reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1397524388/c6c4d335-3ca6-401f-a875-3b1dfe59b289');">
+        <article class="proj wide reveal" data-cats="ha" style="--bg-img: url('https://repository-images.githubusercontent.com/1397524388/c6c4d335-3ca6-401f-a875-3b1dfe59b289');">
           <div>
             <span class="p-badge green">HACS</span>
             <h3>floor3d-card mod</h3>
@@ -113,7 +182,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1297650421/99b9ae0c-41ac-45bc-8bcf-c0be260f82d5');">
+        <article class="proj reveal" data-cats="web" style="--bg-img: url('https://repository-images.githubusercontent.com/1297650421/99b9ae0c-41ac-45bc-8bcf-c0be260f82d5');">
           <div>
             <span class="p-badge wip" data-i18n="dev.wip">In sviluppo</span>
             <h3 data-i18n="dev.kitchen.title">Kitchen App</h3>
@@ -128,7 +197,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1297649390/4031c2f2-2958-484b-9c2d-fd8a601e4862');">
+        <article class="proj reveal" data-cats="web" style="--bg-img: url('https://repository-images.githubusercontent.com/1297649390/4031c2f2-2958-484b-9c2d-fd8a601e4862');">
           <div>
             <span class="p-badge wip" data-i18n="dev.wip2">In sviluppo</span>
             <h3 data-i18n="dev.p5.title">Web-App Palestra</h3>
@@ -144,7 +213,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1300680096/78bd917e-7913-4a02-ba67-e72ea147ba10');">
+        <article class="proj reveal" data-cats="web" style="--bg-img: url('https://repository-images.githubusercontent.com/1300680096/78bd917e-7913-4a02-ba67-e72ea147ba10');">
           <div>
             <span class="p-badge grey">Widget</span>
             <h3 data-i18n="dev.spotify.title">Widget Spotify</h3>
@@ -159,7 +228,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1315059322/03b67927-4272-4117-acb9-cd057ddd1dd5');">
+        <article class="proj reveal" data-cats="ha win" style="--bg-img: url('https://repository-images.githubusercontent.com/1315059322/03b67927-4272-4117-acb9-cd057ddd1dd5');">
           <div>
             <span class="p-badge grey">MQTT</span>
             <h3>PC-MQTT-Notifier</h3>
@@ -176,7 +245,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1146933999/e2bdca06-d2bd-461f-9ab5-66802531c21a');">
+        <article class="proj reveal" data-cats="win" style="--bg-img: url('https://repository-images.githubusercontent.com/1146933999/e2bdca06-d2bd-461f-9ab5-66802531c21a');">
           <div>
             <span class="p-badge grey">Tool</span>
             <h3>feature-overrides-registry</h3>
@@ -191,7 +260,7 @@
           </div>
         </article>
 
-        <article class="proj wide reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1380358940/28de86d6-293d-49ad-a7cc-4644542f6408');">
+        <article class="proj wide reveal" data-cats="games" style="--bg-img: url('https://repository-images.githubusercontent.com/1380358940/28de86d6-293d-49ad-a7cc-4644542f6408');">
           <div>
             <span class="p-badge green" data-i18n="dev.translation">Traduzione</span>
             <h3>Rejuvenation ITA Patch</h3>
@@ -209,7 +278,34 @@
         </article>
       </div>
     </div>
+
+    <div class="container section dev-stats" id="numeri" hidden>
+      <div class="section-head reveal">
+        <span class="dev-kicker">// git log --stat</span>
+        <h2 id="stats-title" data-i18n="dev.st.title">Un anno di commit</h2>
+        <p data-i18n="dev.st.lead">I numeri del mio profilo GitHub, aggiornati ogni giorno.</p>
+      </div>
+      <div class="stats-body" id="stats-body" aria-live="polite"></div>
+    </div>
   </section>
+
+  <dialog class="term-dialog" id="term" aria-label="Terminale" data-i18n-label="dev.term.title">
+    <div class="term">
+      <div class="term-bar">
+        <span class="term-host">giovanni@homelab: ~</span>
+        <button class="term-close" type="button" aria-label="Chiudi il terminale" data-i18n-label="dev.term.close">esc</button>
+      </div>
+      <div class="term-body" id="term-body">
+        <div id="term-out"></div>
+        <form class="term-line" id="term-form" autocomplete="off">
+          <label for="term-in">giovanni@homelab:~$&nbsp;</label>
+          <input id="term-in" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="go"
+            aria-label="Comando" data-i18n-label="dev.term.input">
+        </form>
+      </div>
+      <div class="term-tips" id="term-tips"></div>
+    </div>
+  </dialog>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -249,6 +345,10 @@
   </footer>
 
   <script src="assets/i18n.js"></script>
+  <script src="assets/dev-lab.js"></script>
+  <script src="assets/dev-projects.js"></script>
+  <script src="assets/dev-stats.js"></script>
+  <script src="assets/dev-terminal.js"></script>
 </body>
 
 </html>
