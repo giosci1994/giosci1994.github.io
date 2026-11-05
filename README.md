@@ -66,7 +66,7 @@ assets/
   chef-board.js     the cutting-board timeline on chef.html (scroll-driven CSS 3D, flat fallback)
   wood-board.webp   wood texture of the board
   chef-plates.js    the dish gallery (zoom view) and the behind-the-scenes clips on chef.html
-  piatti/           dish photos (NN.webp 1080 px, NN-540.webp for the grid) and the two muted clips with posters
+  piatti/           dish photos (NN.webp 1080 px, NN-540.webp for the grid) and the three muted clips with posters
   favicon.svg       site icon
   giovanni-chef.webp / giovanni-dev.webp   portraits
   social-preview.png / social-preview.html   Open Graph image (+ its source)
