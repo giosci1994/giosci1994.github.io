@@ -1676,22 +1676,13 @@ html.term-open { overflow: hidden; }
   .lab-panel { gap: 14px; }
 }
 
-/* telefono: lo schema resta leggibile e la vista si sposta sul passo in corso */
+/* telefono: schema compatto a tre colonne (disegnato da dev-lab.js), sempre intero */
 @media (max-width: 700px) {
-  .lab.live .lab-view {
-    position: relative;
-    height: min(46svh, 400px);
-    overflow: hidden;
-    border: 1px solid var(--dark-border);
-    border-radius: var(--radius);
-    background: rgba(13, 19, 18, 0.6);
-  }
-  .lab.live .lab-map {
-    width: 654px;
-    max-width: none;
-    max-height: none;
-    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
+  .lab.live .lab-sticky { padding-top: 60px; }
+  .lab-map { max-height: calc(100svh - 280px); }
+  .lab-map.compact .lab-host-title { font-size: 10px; }
+  .lab-map.compact .lab-host-tag text { font-size: 8.5px; }
+  .lab-map.compact .lab-edge { stroke-width: 1.2; }
   .lab-step h3 { font-size: 1.1rem; }
   .lab-step p { font-size: 0.9rem; line-height: 1.55; }
 }
@@ -1711,7 +1702,6 @@ html.term-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lab.live .lab-step,
   .lab-dots button,
-  .lab.live .lab-map,
   .proj::after { transition: none; }
   .lab-edge.on,
   .lab-node.now .led { animation: none; }
