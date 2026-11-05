@@ -78,8 +78,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
-  mix-blend-mode: difference;
+  color: var(--ink-muted);
 }
 
 .lang-switch {
@@ -317,6 +316,13 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
   align-items: center;
   gap: 0;
   pointer-events: none;
+  transition: left 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Il confine si sposta quando una metà si allarga (flex 1.28 contro 1): il cerchio lo segue. */
+@media (hover: hover) and (min-width: 901px) {
+  .split:has(.side-chef:hover) .hero-center { left: 56.14%; }
+  .split:has(.side-dev:hover) .hero-center { left: 43.86%; }
 }
 
 .amp {
@@ -350,6 +356,9 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
   text-align: center;
   z-index: 9;
   pointer-events: none;
+  /* Bianco in "difference": scuro sulla metà chiara, chiaro su quella scura, lettera per lettera,
+     anche mentre il confine si sposta. */
+  mix-blend-mode: difference;
 }
 
 .hero-name .full {
@@ -358,7 +367,6 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
   font-size: clamp(1.5rem, 3.4vw, 2.4rem);
   letter-spacing: 0.01em;
   color: #fff;
-  mix-blend-mode: difference;
 }
 
 .hero-name .sub {
@@ -370,7 +378,6 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
   text-transform: uppercase;
   color: #fff;
   opacity: 0.9;
-  mix-blend-mode: difference;
 }
 
 /* ============ Page hero (chef.html / dev.html) ============ */
@@ -776,6 +783,7 @@ body.dev-page { background: var(--dark); color: var(--dark-text); }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .side { transition: none; }
+  .hero-center { transition: none; }
 }
 
 /* ============ Responsive ============ */
@@ -835,4 +843,27 @@ body.dev-page { background: var(--dark); color: var(--dark-text); }
   text-transform: uppercase;
   margin-bottom: 16px;
   opacity: 0.6;
+}
+
+/* ============ Transizione tra le pagine ============ */
+@view-transition { navigation: auto; }
+
+.side-chef .portrait,
+.chef-page .page-hero .portrait { view-transition-name: chef-portrait; }
+.side-chef h2,
+.chef-page .page-hero h1 { view-transition-name: chef-title; }
+.side-dev .portrait,
+.dev-page .page-hero .portrait { view-transition-name: dev-portrait; }
+.side-dev h2,
+.dev-page .page-hero h1 { view-transition-name: dev-title; }
+
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
 }
