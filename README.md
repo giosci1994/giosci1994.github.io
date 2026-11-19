@@ -4,8 +4,6 @@
 A split-screen landing page that tells two stories: ten years of Italian fine
 dining, and a homelab full of containers and home-automation projects.
 
-**🇬🇧 English** · [🇮🇹 Italiano](#italiano)
-
 <p align="center">
   <a href="https://giosci1994.github.io"><img src="https://img.shields.io/website?url=https%3A%2F%2Fgiosci1994.github.io&label=giosci1994.github.io&up_message=online&down_message=offline" alt="Website status" /></a>
   <img src="https://img.shields.io/badge/GitHub%20Pages-live-2ea44f?logo=githubpages&logoColor=white" alt="GitHub Pages" />
@@ -146,102 +144,6 @@ feel free to reuse the structure and the i18n approach.
 > biographical/career content and the personal branding are © Giovanni La Cascia,
 > all rights reserved. Please don't reuse those as your own.
 
-<br>
-
----
 ---
 
-<a id="italiano"></a>
-
-# 🇮🇹 Italiano
-
-**Pagina personale di Giovanni La Cascia — Chef di giorno, Dev di notte.**
-Una landing split-screen che racconta due storie: dieci anni di fine dining
-italiano e un homelab pieno di container e progetti di domotica.
-
-<p align="center"><strong>🌐 Online: <a href="https://giosci1994.github.io">giosci1994.github.io</a></strong></p>
-
-## ✨ In breve
-
-- 🎭 **Due anime, due pagine** — un chooser split-screen (`index.html`) porta al
-  lato **Chef** e al lato **Dev**, ognuno con il suo tema.
-- 🎨 **Doppio tema** — carta/ambra caldo e serif per la cucina, verde/teal scuro e
-  mono per il codice, da un unico foglio di stile condiviso.
-- 🌍 **Bilingue IT/EN** — switch di lingua lato client senza ricaricare la pagina;
-  la scelta è ricordata in `localStorage`.
-- ⚡ **Zero build step** — solo HTML + CSS + JS vanilla. Niente da compilare,
-  niente da installare.
-- 📱 **Responsive e accessibile** — layout mobile-friendly, animazioni che
-  rispettano `prefers-reduced-motion`, label ARIA sui controlli.
-- 🔍 **Pronto per SEO e social** — `<title>`/description per pagina, Open Graph +
-  Twitter card, immagine social 1200×630 e favicon SVG.
-
-## 🧱 Stack
-
-- **HTML5** semantico (un file per pagina)
-- **CSS3** con custom properties, flex/grid, doppio tema, nessun framework
-- **JS vanilla** (IIFE) — i18n, switch lingua, reveal con `IntersectionObserver`
-- **Font**: Fraunces · Inter · JetBrains Mono (Google Fonts)
-- **Hosting**: GitHub Pages (deploy dal branch `main`, root)
-
-## 🧩 Struttura
-
-- `index.html` — chooser split-screen: due anime, due pagine
-- `chef.html` — il percorso in cucina: un tagliere in 3D con le comande (tema caldo carta/ambra, serif)
-- `dev.html` — mappa dell'homelab, progetti, numeri di GitHub e un terminale nascosto (tema scuro verde/teal, mono)
-- `style.css` — dual-theme condiviso
-- `assets/i18n.js` — traduzioni IT/EN (chiavi `data-i18n`) + boot comune
-- `assets/chef-board.js` + `assets/wood-board.webp` — il tagliere della pagina Chef (CSS 3D guidato dallo scroll, con versione piatta di riserva)
-- `assets/chef-plates.js` + `assets/piatti/` — la galleria dei piatti con ingrandimento e i video "Dietro le quinte" (foto 1080 px e 540 px per la griglia, video muti con copertina)
-- `assets/dev-lab.js` — la mappa dell'homelab nella pagina Dev (guidata dallo scroll; sul telefono la vista segue il passo in corso)
-- `assets/dev-projects.js` — filtri per argomento e luce che segue il puntatore sulle schede dei progetti
-- `assets/dev-stats.js` — i numeri di GitHub disegnati nella pagina da `stats.json`, pubblicato dal workflow del profilo
-- `assets/dev-terminal.js` — il terminale nascosto (premi `~` nella pagina Dev)
-- `tools/make-wood-texture.py` — rigenera la texture del legno (serve numpy + Pillow; il sito non lo usa)
-
-## 🛠️ Avvio in locale
-
-È un sito statico, nessuna dipendenza. Basta servirlo via HTTP:
-
-```bash
-git clone https://github.com/giosci1994/giosci1994.github.io.git
-cd giosci1994.github.io
-python -m http.server 8000        # → http://localhost:8000
-```
-
-## 🚀 Deploy (GitHub Pages)
-
-Servito direttamente dal repository, senza pipeline:
-
-1. Repo → **Settings → Pages**
-2. **Source**: *Deploy from a branch*
-3. **Branch**: `main` · **Cartella**: `/ (root)`
-
-Ogni push su `main` viene pubblicato su **https://giosci1994.github.io** in un
-paio di minuti.
-
-## 🌍 Internazionalizzazione (i18n)
-
-Tutti i testi stanno in [`assets/i18n.js`](assets/i18n.js). Ogni elemento
-traducibile ha un attributo `data-i18n="chiave"` e lo script sostituisce il testo
-in base alla lingua scelta, localizzando anche `<title>` e meta description. Per
-**aggiungere una lingua** basta un nuovo dizionario accanto a `it` / `en` e un
-pulsante corrispondente.
-
-## ☕ Supporta il progetto
-
-Se il sito o uno dei miei progetti ti è utile, puoi offrirmi un caffè.
-
-<a href="https://buymeacoffee.com/giosci1994u"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="45" alt="Buy Me a Coffee" /></a>
-
-## 📄 Licenza
-
-Il **codice sorgente** (HTML/CSS/JS) è rilasciato con [licenza GNU GPLv3](LICENSE).
-
-> ℹ️ **Non coperti da GPLv3:** le foto personali (`giovanni-*.webp`), i contenuti
-> biografici e il personal branding sono © Giovanni La Cascia, tutti i diritti
-> riservati.
-
----
-
-<p align="center"><sub>fatto con ❤️ tra fornelli e container · made with ❤️ between stoves and containers</sub></p>
+<p align="center"><sub>made with ❤️ between stoves and containers</sub></p>
