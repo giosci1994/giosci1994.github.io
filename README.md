@@ -65,16 +65,43 @@ assets/
   wood-board.webp   wood texture of the board
   chef-plates.js    the dish gallery (zoom view) and the behind-the-scenes clips on chef.html
   dev-lab.js        the homelab map on dev.html (scroll-driven, follows the current step on phones)
-  dev-projects.js   topic filters and pointer light on the project cards
+  dev-projects.js   pointer light on project cards
+  projects.js       dynamic renderer + category filters for "More projects"
+  projects.json     auto-generated index of public repos tagged with `showcase`
+  projects-overrides.json   optional Italian copy, titles, badges and license overrides
   dev-stats.js      GitHub numbers drawn in the page from stats.json (published by the profile workflow)
   dev-terminal.js   the hidden terminal (press ~ on dev.html)
   piatti/           dish photos (NN.webp 1080 px, NN-540.webp for the grid) and the three muted clips with posters
   favicon.svg       site icon
   giovanni-chef.webp / giovanni-dev.webp   portraits
   social-preview.png / social-preview.html   Open Graph image (+ its source)
+scripts/
+  update_projects.py        stdlib Python indexer generating assets/projects.json
+  test_update_projects.py   offline unit tests (`python3 -m unittest`)
+.github/workflows/
+  update-projects.yml       daily workflow updating assets/projects.json
+docs/
+  CHANGELOG.md      structural change history
 google*.html        Google Search Console verification file
 tools/
   make-wood-texture.py   regenerates assets/wood-board.webp (needs numpy + Pillow; not used by the site)
+```
+
+---
+
+## 🧩 Hybrid Projects (`dev.html`)
+
+The Dev page combines a curated **Featured** section (`Arborae` full-width banner + 3 featured cards: `d2ha`, `GymMaster`, `Floor3d Card`) with an automated **More projects** catalog powered by GitHub:
+
+1. **Tag a public repository** with the topic `showcase` on GitHub.
+2. **GitHub Actions** (`.github/workflows/update-projects.yml`, daily at `03:00 UTC` + manual/dispatch triggers) runs `scripts/update_projects.py` via GitHub GraphQL API (or REST fallback without token) and commits `assets/projects.json` when changed.
+3. **Optional overrides** in `assets/projects-overrides.json` provide Italian descriptions (`description_it`), custom titles, badges, or license labels without touching HTML.
+
+To preview locally (including repositories not yet tagged with `showcase`):
+
+```bash
+GITHUB_TOKEN=$(gh auth token) python3 scripts/update_projects.py --include-repos repo1,repo2
+python3 -m unittest discover -s scripts -p "test_*.py"
 ```
 
 ---

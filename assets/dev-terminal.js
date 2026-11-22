@@ -73,10 +73,13 @@
   };
   const T = () => TXT[lang()];
 
-  const projects = () => Array.from(document.querySelectorAll('#projects .proj')).map(p => ({
-    name: p.querySelector('h3').textContent.split(' — ')[0].trim(),
-    wip: !!p.querySelector('.p-badge.wip')
-  }));
+  const projects = () => Array.from(document.querySelectorAll('#projects .proj, #projects-grid .proj:not(.proj-empty)')).map(p => {
+    const h = p.querySelector('h3');
+    return {
+      name: h ? h.textContent.split(' — ')[0].trim() : 'Project',
+      wip: !!p.querySelector('.p-badge.wip')
+    };
+  });
 
   function neofetch() {
     const x = T(), s = window.devStats;

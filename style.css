@@ -1277,6 +1277,14 @@ html.lb-open { overflow: hidden; }
 
 .proj.featured,
 .proj.wide { grid-column: span 2; }
+.proj.org-banner {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+.proj.org-banner p { margin-bottom: 0; }
+.proj.org-banner .proj-links { margin-top: 0; flex-shrink: 0; }
 
 .proj h3 {
   font-family: var(--font-mono);
@@ -1346,7 +1354,7 @@ html.lb-open { overflow: hidden; }
 
 .term-open:hover { color: var(--green); border-color: rgba(95, 179, 166, 0.5); }
 .term-open:focus-visible,
-.proj-filters button:focus-visible,
+.filter-pill:focus-visible,
 .lab-dots button:focus-visible,
 .term-tips button:focus-visible,
 .term-close:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
@@ -1462,14 +1470,15 @@ html.lb-open { overflow: hidden; }
 .lab-node.now { filter: drop-shadow(0 0 14px rgba(52, 211, 153, 0.35)); }
 @keyframes lab-blink { 50% { opacity: 0.35; } }
 
-/* ---- progetti: filtri e luce ---- */
+/* ---- progetti: filtri, altri progetti e luce ---- */
 .dev-projects .section-head { margin-bottom: 28px; }
+.more-projects { padding-top: 0; }
+.more-projects .section-head { margin-bottom: 28px; }
 
-.proj-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-.proj-filters button {
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.filter-pill {
   display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
+  align-items: center;
   padding: 7px 14px;
   border: 1px solid var(--dark-border);
   border-radius: 999px;
@@ -1481,12 +1490,27 @@ html.lb-open { overflow: hidden; }
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
-.proj-filters button b { font-weight: 400; opacity: 0.75; font-variant-numeric: tabular-nums; }
-.proj-filters button:hover { color: var(--dark-text); border-color: rgba(95, 179, 166, 0.5); }
-.proj-filters button[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #04110d; }
+.filter-pill:hover { color: var(--dark-text); border-color: rgba(95, 179, 166, 0.5); }
+.filter-pill.active,
+.filter-pill[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #04110d; }
 
-.projects.filtered .proj.featured,
-.projects.filtered .proj.wide { grid-column: span 1; }
+.proj > div:first-child p:last-child { margin-bottom: 0; }
+.proj-meta {
+  margin: 14px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--dark-muted);
+  opacity: 0.85;
+}
+.proj-bottom .proj-links { margin-top: 14px; }
+.proj-empty { grid-column: 1 / -1; }
+.projects-loading {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--dark-muted);
+}
 
 @property --spot { syntax: '<number>'; inherits: false; initial-value: 0; }
 
@@ -1819,6 +1843,7 @@ html.term-open { overflow: hidden; }
   .projects { grid-template-columns: 1fr; }
   .proj.featured,
   .proj.wide { grid-column: span 1; }
+  .proj.org-banner { flex-direction: column; align-items: stretch; gap: 18px; }
 
   .section { padding-top: 72px; padding-bottom: 72px; }
 

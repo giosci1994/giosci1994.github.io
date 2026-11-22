@@ -16,3 +16,7 @@ desktop.ini
 
 # Node (only if a tooling step is ever added)
 node_modules/
+
+# Python
+__pycache__/
+*.py[cod]

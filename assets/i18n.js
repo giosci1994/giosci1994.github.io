@@ -63,19 +63,21 @@
       'dev.s.lead': 'Non sviluppatore di mestiere — appassionato vero. Un homelab completo, nato su un Raspberry Pi e oggi su un mini PC Intel N150, e la voglia di risolvere problemi reali con software fatto bene.',
       'dev.p1': 'Monitoraggio e controllo dei container Docker con web UI moderna e autodiscovery MQTT per Home Assistant. Il progetto di punta di Arborae.',
       'dev.p2': 'Organizzazione open source fondata con Baldo: software pulito, modulare e documentato.',
-      'dev.p3': 'Script e tool Windows per sbloccare il supporto sperimentale NVMe nativo, con rollback e release automatiche.',
-      'dev.wip': 'In sviluppo', 'dev.wip2': 'In sviluppo',
-      'dev.p5.title': 'Web-App Palestra',
-      'dev.p5': 'Piattaforma a microservizi per la gestione della palestra: schede e allenamenti, dashboard web, bot Telegram e scraper automatico.',
-      'dev.kitchen.title': 'Kitchen App',
-      'dev.kitchen': 'Applicazione web per la gestione della cucina e delle ricette.',
-      'dev.spotify.title': 'Widget Spotify',
-      'dev.spotify': 'Widget in tempo reale per Spotify.',
-      'dev.floor3d': 'Il digital twin 3D della casa in Home Assistant: fork di floor3d-card con librerie aggiornate, editor visuale, mappe dei sensori, allarmi, cielo e meteo. Nella lista ufficiale di HACS.',
-      'dev.mqtt': 'Notifiche di MQTT e Home Assistant in sovrimpressione su Windows: leggere, personalizzabili, con sfondi animati.',
-      'dev.translation': 'Traduzione',
-      'dev.rejuv': 'Traduzione amatoriale completa di Pokémon Rejuvenation in italiano: dialoghi, interfaccia, oggetti, mosse e Pokédex, il 99,9% dei testi. Su Windows, Linux, macOS, Android e iOS.',
+      'dev.gym': 'Piattaforma a microservizi self-hosted per la gestione della palestra: Web Dashboard PWA, Bot Telegram, assistente AI e scraper automatico (PolyForm Noncommercial 1.0.0).',
+      'dev.floor3d': 'Fork potenziato di floor3d-card per Home Assistant: Digital Twin 3D con three.js 0.186 e Lit 3, luce solare e ombre, colori di stato, tracker persone e animazioni.',
       'dev.site': 'Sito',
+      'dev.more.title': 'Altri progetti',
+      'dev.more.lead': 'Repository pubblici caricati automaticamente da GitHub con il topic showcase.',
+      'dev.more.filters.label': 'Filtra gli altri progetti per categoria',
+      'dev.more.all': 'Tutti',
+      'dev.more.live': 'Live',
+      'dev.more.repo': 'Repo',
+      'dev.more.loading': 'Caricamento progetti…',
+      'dev.more.no_desc': 'Nessuna descrizione disponibile.',
+      'dev.more.empty.title': 'Nessun progetto trovato',
+      'dev.more.empty.desc': 'Ogni repository pubblico contrassegnato con il topic showcase comparirà qui automaticamente.',
+      'dev.more.error': 'Impossibile caricare i progetti in questo momento.',
+      'dev.cat.Gaming': 'Giochi',
       'dev.term.open': 'apri il terminale',
       'dev.term.title': 'Terminale',
       'dev.term.close': 'Chiudi il terminale',
@@ -105,10 +107,6 @@
       'dev.lab.n.casa.t': 'Casa',
       'dev.lab.n.casa': 'sensori e luci',
       'dev.lab.n.rpi': 'dov’è iniziato',
-      'dev.f.label': 'Filtra i progetti',
-      'dev.f.all': 'Tutti',
-      'dev.f.web': 'Web app',
-      'dev.f.games': 'Giochi',
       'dev.st.title': 'Un anno di commit',
       'dev.st.lead': 'I numeri del mio profilo GitHub, aggiornati ogni giorno.',
       'dev.st.total': 'contributi dal {y}',
@@ -122,7 +120,6 @@
       'dev.st.profile': 'profilo GitHub',
       'dev.st.bar': '{d}: {n} contributi',
       'dev.st.aria': 'Contributi a settimana negli ultimi 12 mesi: {n} in totale.',
-      'dev.p6': 'Nato su un Raspberry Pi, oggi su un mini PC Intel N150 con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, tunnel Cloudflare e molto altro — tutto in casa.',
       // --- footer / meta ---
       'footer.note': 'fatto con ❤️ tra fornelli e container',
       '_meta.title.home': 'Giovanni La Cascia — Chef & Dev',
@@ -189,19 +186,21 @@
       'dev.s.lead': 'Not a developer by trade — a true enthusiast. A full homelab that started on a Raspberry Pi and now runs on an Intel N150 mini PC, and the urge to solve real problems with well-crafted software.',
       'dev.p1': 'Monitor and control Docker containers with a modern web UI and MQTT autodiscovery for Home Assistant. Arborae’s flagship project.',
       'dev.p2': 'Open-source organization founded with Baldo: clean, modular, documented software.',
-      'dev.p3': 'Windows scripts and tools to unlock experimental native NVMe support, with rollback and automated releases.',
-      'dev.wip': 'In progress', 'dev.wip2': 'In progress',
-      'dev.p5.title': 'Gym Web-App',
-      'dev.p5': 'Microservice platform for gym management: workout plans, web dashboard, Telegram bot and automated scraper.',
-      'dev.kitchen.title': 'Kitchen App',
-      'dev.kitchen': 'Web application for kitchen and recipe management.',
-      'dev.spotify.title': 'Spotify Widget',
-      'dev.spotify': 'Real-time widget for Spotify.',
-      'dev.floor3d': 'A 3D digital twin of your home for Home Assistant: a fork of floor3d-card with updated libraries, a visual editor, sensor maps, alarms, sky and weather. In the official HACS store.',
-      'dev.mqtt': 'MQTT and Home Assistant notifications as a lightweight, customizable overlay on Windows, with animated backgrounds.',
-      'dev.translation': 'Translation',
-      'dev.rejuv': 'A complete fan translation of Pokémon Rejuvenation into Italian: dialogue, UI, items, moves and Pokédex, 99.9% of the text. On Windows, Linux, macOS, Android and iOS.',
+      'dev.gym': 'Self-hosted microservice platform for gym management with a PWA Web Dashboard, Telegram Bot, AI assistant, and automated scraper (PolyForm Noncommercial 1.0.0).',
+      'dev.floor3d': 'Enhanced fork of floor3d-card for Home Assistant: 3D digital twin with three.js 0.186 and Lit 3, sunlight and shadows, state colours, person trackers and animations.',
       'dev.site': 'Website',
+      'dev.more.title': 'More projects',
+      'dev.more.lead': 'Public repositories loaded automatically from GitHub via the showcase topic.',
+      'dev.more.filters.label': 'Filter more projects by category',
+      'dev.more.all': 'All',
+      'dev.more.live': 'Live',
+      'dev.more.repo': 'Repo',
+      'dev.more.loading': 'Loading projects…',
+      'dev.more.no_desc': 'No description provided.',
+      'dev.more.empty.title': 'No projects found',
+      'dev.more.empty.desc': 'Every public repository tagged with the showcase topic will appear here automatically.',
+      'dev.more.error': 'Unable to load projects right now.',
+      'dev.cat.Gaming': 'Gaming',
       'dev.term.open': 'open the terminal',
       'dev.term.title': 'Terminal',
       'dev.term.close': 'Close the terminal',
@@ -231,10 +230,6 @@
       'dev.lab.n.casa.t': 'Home',
       'dev.lab.n.casa': 'sensors and lights',
       'dev.lab.n.rpi': 'where it began',
-      'dev.f.label': 'Filter projects',
-      'dev.f.all': 'All',
-      'dev.f.web': 'Web apps',
-      'dev.f.games': 'Games',
       'dev.st.title': 'A year of commits',
       'dev.st.lead': 'The numbers from my GitHub profile, refreshed every day.',
       'dev.st.total': 'contributions since {y}',
@@ -248,7 +243,6 @@
       'dev.st.profile': 'GitHub profile',
       'dev.st.bar': '{d}: {n} contributions',
       'dev.st.aria': 'Contributions per week over the last 12 months: {n} in total.',
-      'dev.p6': 'Started on a Raspberry Pi, now an Intel N150 mini PC running Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, Cloudflare tunnels and much more — all self-hosted.',
       'footer.note': 'made with ❤️ between stoves and containers',
       '_meta.title.home': 'Giovanni La Cascia — Chef & Dev',
       '_meta.title.chef': 'Giovanni La Cascia — Chef',
@@ -260,13 +254,20 @@
   };
 
   const HTML_KEYS = new Set([]);
+  const getLang = () => (document.documentElement.lang === 'en' ? 'en' : 'it');
+  const translate = key => {
+    const dict = I18N[getLang()] || I18N.it;
+    return key in dict ? dict[key] : (I18N.it[key] || key);
+  };
   // per gli script di pagina che compongono testi al volo (es. Riproduci/Pausa)
-  window.siteT = key => (I18N[document.documentElement.lang] || I18N.it)[key];
+  window.siteT = key => (I18N[getLang()] || I18N.it)[key];
+  window.siteI18n = { getLang, t: translate };
   const PAGE = document.body.dataset.page || 'home';
 
   function setLang(lang) {
-    const dict = I18N[lang] || I18N.it;
-    document.documentElement.lang = lang;
+    const resolved = lang in I18N ? lang : 'it';
+    const dict = I18N[resolved];
+    document.documentElement.lang = resolved;
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (!(key in dict)) return;
@@ -287,11 +288,12 @@
     if (md) md.setAttribute('content', dict['_meta.desc.' + PAGE]);
     const bIt = document.getElementById('lang-it');
     const bEn = document.getElementById('lang-en');
-    if (bIt) bIt.classList.toggle('active', lang === 'it');
-    if (bEn) bEn.classList.toggle('active', lang === 'en');
-    try { localStorage.setItem('lang', lang); } catch (e) { }
+    if (bIt) bIt.classList.toggle('active', resolved === 'it');
+    if (bEn) bEn.classList.toggle('active', resolved === 'en');
+    try { localStorage.setItem('lang', resolved); } catch (e) { }
     // chi ha testi che cambiano misura (il tagliere della pagina Chef) si ricalcola
-    document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
+    document.dispatchEvent(new CustomEvent('langchange', { detail: { lang: resolved } }));
+    window.dispatchEvent(new CustomEvent('site:langchange', { detail: { lang: resolved } }));
   }
 
   const bIt = document.getElementById('lang-it');

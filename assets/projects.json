@@ -1,0 +1,199 @@
+{
+  "user": "giosci1994",
+  "topic": "showcase",
+  "projects": [
+    {
+      "name": "feature-overrides-registry",
+      "title": "Feature Overrides Registry",
+      "description": "Enable/Disable hidden Windows Feature Management overrides to unlock experimental Native NVMe support. Includes scripts, .exe tool, rollback, and auto-release workflow.",
+      "url": "https://giosci1994.github.io/feature-overrides-registry/",
+      "repo": "https://github.com/giosci1994/feature-overrides-registry",
+      "image": "https://repository-images.githubusercontent.com/1146933999/dfa96394-6745-4f06-82b9-d1eed49847eb",
+      "language": "PowerShell",
+      "license": "GPL-3.0",
+      "categories": [
+        "Windows"
+      ],
+      "topics": [
+        "cli",
+        "csharp",
+        "dotnet",
+        "feature-management",
+        "nvme",
+        "optimization",
+        "powershell",
+        "registry",
+        "ssd",
+        "storage",
+        "system-tools",
+        "windows",
+        "windows-11"
+      ],
+      "pushed_at": "2026-11-22T20:13:30Z"
+    },
+    {
+      "name": "W11-cleaner-tool",
+      "title": "W11 Cleaner Tool",
+      "description": "Simple cleaning and optimization tool for Windows 11: Base and Expert mode, portable exe for x64 and ARM64",
+      "url": "https://giosci1994.github.io/W11-cleaner-tool/",
+      "repo": "https://github.com/giosci1994/W11-cleaner-tool",
+      "image": "https://repository-images.githubusercontent.com/1463294236/7ae361c1-4cef-48b5-ab2e-c76e8528dd0f",
+      "language": "C#",
+      "license": "GPL-3.0",
+      "categories": [
+        "Windows"
+      ],
+      "topics": [
+        "arm64",
+        "cleaner",
+        "dotnet",
+        "gaming",
+        "optimization",
+        "windows",
+        "windows-11",
+        "wpf"
+      ],
+      "pushed_at": "2026-11-22T20:13:20Z"
+    },
+    {
+      "name": "widget-spotify",
+      "title": "Widget Spotify",
+      "description": "🎵 Spotify remote in the Windows system tray — now playing, controls & device switch (Echo/PC/phone). Electron + Spotify Web API.",
+      "url": "https://giosci1994.github.io/widget-spotify/",
+      "repo": "https://github.com/giosci1994/widget-spotify",
+      "image": "https://repository-images.githubusercontent.com/1300680096/78bd917e-7913-4a02-ba67-e72ea147ba10",
+      "language": "JavaScript",
+      "license": "GPL-3.0",
+      "categories": [
+        "Windows"
+      ],
+      "topics": [
+        "desktop-app",
+        "electron",
+        "electron-app",
+        "music",
+        "now-playing",
+        "oauth-pkce",
+        "spotify",
+        "spotify-connect",
+        "spotify-web-api",
+        "system-tray",
+        "taskbar",
+        "tray-app",
+        "widget",
+        "windows"
+      ],
+      "pushed_at": "2026-11-22T20:06:08Z"
+    },
+    {
+      "name": "kitchen-app",
+      "title": "Kitchen App",
+      "description": "Modern Kitchen & Restaurant Management Platform (PWA, Inventory, Recipes, Prep-Lists & Docker ready)",
+      "url": "https://giosci1994.github.io/kitchen-app/",
+      "repo": "https://github.com/giosci1994/kitchen-app",
+      "image": "https://repository-images.githubusercontent.com/1297650421/8ceec646-9f2f-4ced-9f52-a6e91507e619",
+      "language": "TypeScript",
+      "license": null,
+      "categories": [
+        "Web App"
+      ],
+      "topics": [
+        "docker",
+        "docker-compose",
+        "inventory-management",
+        "kitchen-management",
+        "nextjs",
+        "postgresql",
+        "prep-list",
+        "prisma",
+        "pwa",
+        "pwa-app",
+        "pwa-apps",
+        "recipes",
+        "restaurant"
+      ],
+      "pushed_at": "2026-11-22T20:02:19Z"
+    },
+    {
+      "name": "PC-MQTT-Notifier",
+      "title": "PC MQTT Notifier",
+      "description": "🔔 Lightweight Windows notification overlay for MQTT & Home Assistant — customizable scale, transparency, fluid background, tray icon & bilingual i18n.",
+      "url": "https://giosci1994.github.io/PC-MQTT-Notifier/",
+      "repo": "https://github.com/giosci1994/PC-MQTT-Notifier",
+      "image": "https://repository-images.githubusercontent.com/1315059322/97834993-8fd7-421b-8ec0-82d891fb6f2e",
+      "language": "Python",
+      "license": "GPL-3.0",
+      "categories": [
+        "Windows",
+        "Home Assistant"
+      ],
+      "topics": [
+        "auto-updater",
+        "customtkinter",
+        "desktop-app",
+        "fluid-background",
+        "home-assistant",
+        "i18n",
+        "mqtt",
+        "notifications",
+        "overlay",
+        "python",
+        "system-tray",
+        "windows",
+        "windows-11"
+      ],
+      "pushed_at": "2026-11-22T19:13:49Z"
+    },
+    {
+      "name": "ingegnere-f1",
+      "title": "Ingegnere F1",
+      "description": "Home-made race engineer for EA SPORTS F1 25 (2026): reads UDP telemetry and talks to you in Italian, team-radio style, on your phone. Local, Docker. Unofficial.",
+      "url": "https://giosci1994.github.io/ingegnere-f1/",
+      "repo": "https://github.com/giosci1994/ingegnere-f1",
+      "image": "https://repository-images.githubusercontent.com/1464726162/4c450740-89e2-49e7-8fce-bab174647de7",
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "categories": [
+        "Gaming"
+      ],
+      "topics": [
+        "docker",
+        "f1-25",
+        "piper-tts",
+        "ps5",
+        "pwa",
+        "python",
+        "race-engineer",
+        "sim-racing",
+        "telemetry",
+        "udp"
+      ],
+      "pushed_at": "2026-11-21T23:43:52Z"
+    },
+    {
+      "name": "rejuvenation-ita-patch",
+      "title": "Rejuvenation Ita Patch",
+      "description": "🇮🇹 Complete unofficial Italian translation patch for Pokémon Rejuvenation — 99.9% of the game's text",
+      "url": "https://giosci1994.github.io/rejuvenation-ita-patch/",
+      "repo": "https://github.com/giosci1994/rejuvenation-ita-patch",
+      "image": "https://repository-images.githubusercontent.com/1380358940/28de86d6-293d-49ad-a7cc-4644542f6408",
+      "language": "Python",
+      "license": "GPL-3.0",
+      "categories": [
+        "Gaming"
+      ],
+      "topics": [
+        "fan-translation",
+        "italian",
+        "localization",
+        "mkxp-z",
+        "pokemon",
+        "pokemon-essentials",
+        "rejuvenation",
+        "rpg-maker-xp",
+        "traduzione"
+      ],
+      "pushed_at": "2026-11-19T17:31:49Z"
+    }
+  ]
+}

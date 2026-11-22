@@ -1,0 +1,38 @@
+{
+  "W11-cleaner-tool": {
+    "title": "W11 Cleaner Tool",
+    "badge": "Windows",
+    "description_it": "Tool di pulizia e ottimizzazione per Windows 11 con modalità Base ed Esperto, diagnostica in sola lettura, quarantena duplicati, storico con annulla ed exe portatile x64/ARM64."
+  },
+  "ingegnere-f1": {
+    "title": "Ingegnere F1",
+    "badge": "Gaming",
+    "description_it": "Ingegnere di pista locale in Docker per EA SPORTS F1 25 (2026): legge la telemetria UDP e parla in italiano con effetto team radio su una web app per telefono."
+  },
+  "PC-MQTT-Notifier": {
+    "title": "PC-MQTT-Notifier",
+    "badge": "MQTT · Windows",
+    "description_it": "Overlay leggero su Windows per notifiche da MQTT e Home Assistant, con stili personalizzabili (Glass, Aurora, Classic), sfondi animati, tray icon e auto-updater."
+  },
+  "kitchen-app": {
+    "title": "Kitchen App",
+    "badge": "Web App",
+    "license": "PolyForm Noncommercial 1.0.0",
+    "description_it": "Piattaforma PWA per la gestione di cucina e ristorante: inventario, ricettario, prep-list, Next.js 15, React 19, Prisma/PostgreSQL e supporto Docker."
+  },
+  "widget-spotify": {
+    "title": "Widget Spotify",
+    "badge": "Windows",
+    "description_it": "Telecomando Spotify nella tray di Windows (Electron + Spotify Web API): brano in riproduzione, controlli, barra avanzamento, volume e cambio dispositivo."
+  },
+  "feature-overrides-registry": {
+    "title": "Feature Overrides Registry",
+    "badge": "Windows",
+    "description_it": "Script, file .reg e tool .NET per attivare o disattivare gli override sperimentali Native NVMe su Windows, con rollback pulito e release verificate SHA256."
+  },
+  "rejuvenation-ita-patch": {
+    "title": "Rejuvenation ITA Patch",
+    "badge": "Gaming",
+    "description_it": "Patch amatoriale completa di traduzione in italiano per Pokémon Rejuvenation (99,9% dei testi: dialoghi, interfaccia, mosse e Pokédex) su Windows, Linux, macOS, Android e iOS."
+  }
+}

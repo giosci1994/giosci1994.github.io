@@ -123,16 +123,8 @@
         </p>
       </div>
 
-      <div class="proj-filters" id="proj-filters" role="group" aria-label="Filtra i progetti" data-i18n-label="dev.f.label" hidden>
-        <button type="button" data-k="all" aria-pressed="true"><span data-i18n="dev.f.all">Tutti</span><b></b></button>
-        <button type="button" data-k="ha" aria-pressed="false"><span>Home Assistant</span><b></b></button>
-        <button type="button" data-k="web" aria-pressed="false"><span data-i18n="dev.f.web">Web app</span><b></b></button>
-        <button type="button" data-k="win" aria-pressed="false"><span>Windows</span><b></b></button>
-        <button type="button" data-k="games" aria-pressed="false"><span data-i18n="dev.f.games">Giochi</span><b></b></button>
-      </div>
-
       <div class="projects" id="projects">
-        <article class="proj featured reveal" data-cats="" style="--bg-img: url('https://repository-images.githubusercontent.com/1138617227/3a5c7aaa-40fa-42b5-b54a-8ecfa537fca4');">
+        <article class="proj org-banner reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1138617227/3a5c7aaa-40fa-42b5-b54a-8ecfa537fca4');">
           <div>
             <span class="p-badge green">Featured</span>
             <h3>Arborae</h3>
@@ -147,7 +139,7 @@
           </div>
         </article>
 
-        <article class="proj reveal" data-cats="ha" style="--bg-img: url('https://repository-images.githubusercontent.com/1100962339/27733d83-311e-43c6-b649-0aee4e047c6d');">
+        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1100962339/27733d83-311e-43c6-b649-0aee4e047c6d');">
           <div>
             <span class="p-badge green">Docker / HA</span>
             <h3>d2ha — Docker to Home Assistant</h3>
@@ -164,14 +156,30 @@
           </div>
         </article>
 
-        <article class="proj wide reveal" data-cats="ha" style="--bg-img: url('https://repository-images.githubusercontent.com/1397524388/c6c4d335-3ca6-401f-a875-3b1dfe59b289');">
+        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1297649390/4031c2f2-2958-484b-9c2d-fd8a601e4862');">
           <div>
-            <span class="p-badge green">HACS</span>
-            <h3>floor3d-card mod</h3>
+            <span class="p-badge green">Full-Stack / Bot</span>
+            <h3>GymMaster</h3>
+            <p data-i18n="dev.gym">
+              Piattaforma a microservizi self-hosted per la gestione della palestra: Web Dashboard
+              PWA, Bot Telegram, assistente AI e scraper automatico (PolyForm Noncommercial 1.0.0).
+            </p>
+          </div>
+          <div class="proj-links">
+            <a class="dev-btn solid" href="https://giosci1994.github.io/webapp-palestra/" target="_blank"
+              rel="noreferrer" data-i18n="dev.more.live">Live</a>
+            <a class="dev-btn line" href="https://github.com/giosci1994/webapp-palestra" target="_blank"
+              rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="proj reveal" style="--bg-img: url('https://repository-images.githubusercontent.com/1397524388/c6c4d335-3ca6-401f-a875-3b1dfe59b289');">
+          <div>
+            <span class="p-badge green">Home Assistant</span>
+            <h3>Floor3d Card</h3>
             <p data-i18n="dev.floor3d">
-              Il digital twin 3D della casa in Home Assistant: fork di floor3d-card con librerie
-              aggiornate, editor visuale, mappe dei sensori, allarmi, cielo e meteo. Nella lista
-              ufficiale di HACS.
+              Fork potenziato di floor3d-card per Home Assistant: Digital Twin 3D con three.js 0.186
+              e Lit 3, luce solare e ombre, colori di stato, tracker persone e animazioni.
             </p>
           </div>
           <div class="proj-links">
@@ -181,101 +189,23 @@
               rel="noreferrer">Repo</a>
           </div>
         </article>
+      </div>
+    </div>
 
-        <article class="proj reveal" data-cats="web" style="--bg-img: url('https://repository-images.githubusercontent.com/1297650421/99b9ae0c-41ac-45bc-8bcf-c0be260f82d5');">
-          <div>
-            <span class="p-badge wip" data-i18n="dev.wip">In sviluppo</span>
-            <h3 data-i18n="dev.kitchen.title">Kitchen App</h3>
-            <p data-i18n="dev.kitchen">
-              Applicazione web per la gestione della cucina e delle ricette.
-            </p>
-          </div>
-          <div class="proj-links">
-            <a class="dev-btn solid" href="https://giosci1994.github.io/kitchen-app/" target="_blank" rel="noreferrer">App</a>
-            <a class="dev-btn line" href="https://github.com/giosci1994/kitchen-app" target="_blank"
-              rel="noreferrer">Repo</a>
-          </div>
-        </article>
+    <div class="container section more-projects" id="more-projects">
+      <div class="section-head reveal">
+        <span class="dev-kicker">// altri_progetti</span>
+        <h2 data-i18n="dev.more.title">Altri progetti</h2>
+        <p data-i18n="dev.more.lead">
+          Repository pubblici caricati automaticamente da GitHub con il topic showcase.
+        </p>
+      </div>
 
-        <article class="proj reveal" data-cats="web" style="--bg-img: url('https://repository-images.githubusercontent.com/1297649390/4031c2f2-2958-484b-9c2d-fd8a601e4862');">
-          <div>
-            <span class="p-badge wip" data-i18n="dev.wip2">In sviluppo</span>
-            <h3 data-i18n="dev.p5.title">Web-App Palestra</h3>
-            <p data-i18n="dev.p5">
-              Piattaforma a microservizi per la gestione della palestra: schede e allenamenti,
-              dashboard web, bot Telegram e scraper automatico.
-            </p>
-          </div>
-          <div class="proj-links">
-            <a class="dev-btn solid" href="https://giosci1994.github.io/webapp-palestra/" target="_blank" rel="noreferrer">App</a>
-            <a class="dev-btn line" href="https://github.com/giosci1994/webapp-palestra" target="_blank"
-              rel="noreferrer">Repo</a>
-          </div>
-        </article>
+      <div id="projects-filters" class="filter-bar" role="group" aria-label="Filtra gli altri progetti per categoria"
+        data-i18n-label="dev.more.filters.label" hidden></div>
 
-        <article class="proj reveal" data-cats="web" style="--bg-img: url('https://repository-images.githubusercontent.com/1300680096/78bd917e-7913-4a02-ba67-e72ea147ba10');">
-          <div>
-            <span class="p-badge grey">Widget</span>
-            <h3 data-i18n="dev.spotify.title">Widget Spotify</h3>
-            <p data-i18n="dev.spotify">
-              Widget in tempo reale per Spotify.
-            </p>
-          </div>
-          <div class="proj-links">
-            <a class="dev-btn solid" href="https://giosci1994.github.io/widget-spotify/" target="_blank" rel="noreferrer">App</a>
-            <a class="dev-btn line" href="https://github.com/giosci1994/widget-spotify" target="_blank"
-              rel="noreferrer">Repo</a>
-          </div>
-        </article>
-
-        <article class="proj reveal" data-cats="ha win" style="--bg-img: url('https://repository-images.githubusercontent.com/1315059322/03b67927-4272-4117-acb9-cd057ddd1dd5');">
-          <div>
-            <span class="p-badge grey">MQTT</span>
-            <h3>PC-MQTT-Notifier</h3>
-            <p data-i18n="dev.mqtt">
-              Notifiche di MQTT e Home Assistant in sovrimpressione su Windows: leggere,
-              personalizzabili, con sfondi animati.
-            </p>
-          </div>
-          <div class="proj-links">
-            <a class="dev-btn solid" href="https://github.com/giosci1994/PC-MQTT-Notifier/releases/latest"
-              target="_blank" rel="noreferrer">Download</a>
-            <a class="dev-btn line" href="https://github.com/giosci1994/PC-MQTT-Notifier" target="_blank"
-              rel="noreferrer">Repo</a>
-          </div>
-        </article>
-
-        <article class="proj reveal" data-cats="win" style="--bg-img: url('https://repository-images.githubusercontent.com/1146933999/e2bdca06-d2bd-461f-9ab5-66802531c21a');">
-          <div>
-            <span class="p-badge grey">Tool</span>
-            <h3>feature-overrides-registry</h3>
-            <p data-i18n="dev.p3">
-              Script e tool Windows per sbloccare il supporto sperimentale NVMe nativo,
-              con rollback e release automatiche.
-            </p>
-          </div>
-          <div class="proj-links">
-            <a class="dev-btn line" href="https://github.com/giosci1994/feature-overrides-registry" target="_blank"
-              rel="noreferrer">Repo</a>
-          </div>
-        </article>
-
-        <article class="proj wide reveal" data-cats="games" style="--bg-img: url('https://repository-images.githubusercontent.com/1380358940/28de86d6-293d-49ad-a7cc-4644542f6408');">
-          <div>
-            <span class="p-badge green" data-i18n="dev.translation">Traduzione</span>
-            <h3>Rejuvenation ITA Patch</h3>
-            <p data-i18n="dev.rejuv">
-              Traduzione amatoriale completa di Pokémon Rejuvenation in italiano: dialoghi, interfaccia,
-              oggetti, mosse e Pokédex, il 99,9% dei testi. Su Windows, Linux, macOS, Android e iOS.
-            </p>
-          </div>
-          <div class="proj-links">
-            <a class="dev-btn solid" href="https://giosci1994.github.io/rejuvenation-ita-patch/" target="_blank"
-              rel="noreferrer" data-i18n="dev.site">Sito</a>
-            <a class="dev-btn line" href="https://github.com/giosci1994/rejuvenation-ita-patch" target="_blank"
-              rel="noreferrer">Repo</a>
-          </div>
-        </article>
+      <div id="projects-grid" class="projects projects-grid" aria-live="polite">
+        <p class="projects-loading" data-i18n="dev.more.loading">Caricamento progetti…</p>
       </div>
     </div>
 
@@ -347,6 +277,7 @@
   <script src="assets/i18n.js"></script>
   <script src="assets/dev-lab.js"></script>
   <script src="assets/dev-projects.js"></script>
+  <script src="assets/projects.js"></script>
   <script src="assets/dev-stats.js"></script>
   <script src="assets/dev-terminal.js"></script>
 </body>
