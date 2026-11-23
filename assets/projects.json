@@ -3,59 +3,6 @@
   "topic": "showcase",
   "projects": [
     {
-      "name": "feature-overrides-registry",
-      "title": "Feature Overrides Registry",
-      "description": "Enable/Disable hidden Windows Feature Management overrides to unlock experimental Native NVMe support. Includes scripts, .exe tool, rollback, and auto-release workflow.",
-      "url": "https://giosci1994.github.io/feature-overrides-registry/",
-      "repo": "https://github.com/giosci1994/feature-overrides-registry",
-      "image": "https://repository-images.githubusercontent.com/1146933999/dfa96394-6745-4f06-82b9-d1eed49847eb",
-      "language": "PowerShell",
-      "license": "GPL-3.0",
-      "categories": [
-        "Windows"
-      ],
-      "topics": [
-        "cli",
-        "csharp",
-        "dotnet",
-        "feature-management",
-        "nvme",
-        "optimization",
-        "powershell",
-        "registry",
-        "ssd",
-        "storage",
-        "system-tools",
-        "windows",
-        "windows-11"
-      ],
-      "pushed_at": "2026-11-22T20:13:30Z"
-    },
-    {
-      "name": "W11-cleaner-tool",
-      "title": "W11 Cleaner Tool",
-      "description": "Simple cleaning and optimization tool for Windows 11: Base and Expert mode, portable exe for x64 and ARM64",
-      "url": "https://giosci1994.github.io/W11-cleaner-tool/",
-      "repo": "https://github.com/giosci1994/W11-cleaner-tool",
-      "image": "https://repository-images.githubusercontent.com/1463294236/7ae361c1-4cef-48b5-ab2e-c76e8528dd0f",
-      "language": "C#",
-      "license": "GPL-3.0",
-      "categories": [
-        "Windows"
-      ],
-      "topics": [
-        "arm64",
-        "cleaner",
-        "dotnet",
-        "gaming",
-        "optimization",
-        "windows",
-        "windows-11",
-        "wpf"
-      ],
-      "pushed_at": "2026-11-22T20:13:20Z"
-    },
-    {
       "name": "widget-spotify",
       "title": "Widget Spotify",
       "description": "🎵 Spotify remote in the Windows system tray — now playing, controls & device switch (Echo/PC/phone). Electron + Spotify Web API.",
@@ -83,7 +30,7 @@
         "widget",
         "windows"
       ],
-      "pushed_at": "2026-11-22T20:06:08Z"
+      "pushed_at": "2026-11-23T09:39:00Z"
     },
     {
       "name": "kitchen-app",
@@ -112,7 +59,32 @@
         "recipes",
         "restaurant"
       ],
-      "pushed_at": "2026-11-22T20:02:19Z"
+      "pushed_at": "2026-11-23T09:36:21Z"
+    },
+    {
+      "name": "rejuvenation-ita-patch",
+      "title": "Rejuvenation Ita Patch",
+      "description": "🇮🇹 Complete unofficial Italian translation patch for Pokémon Rejuvenation — 99.9% of the game's text",
+      "url": "https://giosci1994.github.io/rejuvenation-ita-patch/",
+      "repo": "https://github.com/giosci1994/rejuvenation-ita-patch",
+      "image": "https://repository-images.githubusercontent.com/1380358940/28de86d6-293d-49ad-a7cc-4644542f6408",
+      "language": "Python",
+      "license": "GPL-3.0",
+      "categories": [
+        "Gaming"
+      ],
+      "topics": [
+        "fan-translation",
+        "italian",
+        "localization",
+        "mkxp-z",
+        "pokemon",
+        "pokemon-essentials",
+        "rejuvenation",
+        "rpg-maker-xp",
+        "traduzione"
+      ],
+      "pushed_at": "2026-11-23T09:36:10Z"
     },
     {
       "name": "PC-MQTT-Notifier",
@@ -142,7 +114,7 @@
         "windows",
         "windows-11"
       ],
-      "pushed_at": "2026-11-22T19:13:49Z"
+      "pushed_at": "2026-11-23T09:36:07Z"
     },
     {
       "name": "ingegnere-f1",
@@ -168,32 +140,60 @@
         "telemetry",
         "udp"
       ],
-      "pushed_at": "2026-11-21T23:43:52Z"
+      "pushed_at": "2026-11-23T09:36:00Z"
     },
     {
-      "name": "rejuvenation-ita-patch",
-      "title": "Rejuvenation Ita Patch",
-      "description": "🇮🇹 Complete unofficial Italian translation patch for Pokémon Rejuvenation — 99.9% of the game's text",
-      "url": "https://giosci1994.github.io/rejuvenation-ita-patch/",
-      "repo": "https://github.com/giosci1994/rejuvenation-ita-patch",
-      "image": "https://repository-images.githubusercontent.com/1380358940/28de86d6-293d-49ad-a7cc-4644542f6408",
-      "language": "Python",
+      "name": "W11-cleaner-tool",
+      "title": "W11 Cleaner Tool",
+      "description": "Simple cleaning and optimization tool for Windows 11: Base and Expert mode, portable exe for x64 and ARM64",
+      "url": "https://giosci1994.github.io/W11-cleaner-tool/",
+      "repo": "https://github.com/giosci1994/W11-cleaner-tool",
+      "image": "https://repository-images.githubusercontent.com/1463294236/7ae361c1-4cef-48b5-ab2e-c76e8528dd0f",
+      "language": "C#",
       "license": "GPL-3.0",
       "categories": [
-        "Gaming"
+        "Windows"
       ],
       "topics": [
-        "fan-translation",
-        "italian",
-        "localization",
-        "mkxp-z",
-        "pokemon",
-        "pokemon-essentials",
-        "rejuvenation",
-        "rpg-maker-xp",
-        "traduzione"
+        "arm64",
+        "cleaner",
+        "dotnet",
+        "gaming",
+        "optimization",
+        "windows",
+        "windows-11",
+        "wpf"
       ],
-      "pushed_at": "2026-11-19T17:31:49Z"
+      "pushed_at": "2026-11-23T09:35:56Z"
+    },
+    {
+      "name": "feature-overrides-registry",
+      "title": "Feature Overrides Registry",
+      "description": "Enable/Disable hidden Windows Feature Management overrides to unlock experimental Native NVMe support. Includes scripts, .exe tool, rollback, and auto-release workflow.",
+      "url": "https://giosci1994.github.io/feature-overrides-registry/",
+      "repo": "https://github.com/giosci1994/feature-overrides-registry",
+      "image": "https://repository-images.githubusercontent.com/1146933999/dfa96394-6745-4f06-82b9-d1eed49847eb",
+      "language": "PowerShell",
+      "license": "GPL-3.0",
+      "categories": [
+        "Windows"
+      ],
+      "topics": [
+        "cli",
+        "csharp",
+        "dotnet",
+        "feature-management",
+        "nvme",
+        "optimization",
+        "powershell",
+        "registry",
+        "ssd",
+        "storage",
+        "system-tools",
+        "windows",
+        "windows-11"
+      ],
+      "pushed_at": "2026-11-23T08:55:30Z"
     }
   ]
 }
