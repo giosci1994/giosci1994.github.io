@@ -121,7 +121,6 @@
       'dev.st.bar': '{d}: {n} contributi',
       'dev.st.aria': 'Contributi a settimana negli ultimi 12 mesi: {n} in totale.',
       // --- footer / meta ---
-      'footer.note': 'fatto con ❤️ tra fornelli e container',
       '_meta.title.home': 'Giovanni La Cascia — Chef & Dev',
       '_meta.title.chef': 'Giovanni La Cascia — Chef',
       '_meta.title.dev': 'Giovanni La Cascia — Dev',
@@ -243,7 +242,6 @@
       'dev.st.profile': 'GitHub profile',
       'dev.st.bar': '{d}: {n} contributions',
       'dev.st.aria': 'Contributions per week over the last 12 months: {n} in total.',
-      'footer.note': 'made with ❤️ between stoves and containers',
       '_meta.title.home': 'Giovanni La Cascia — Chef & Dev',
       '_meta.title.chef': 'Giovanni La Cascia — Chef',
       '_meta.title.dev': 'Giovanni La Cascia — Dev',

@@ -32,7 +32,8 @@ dining, and a homelab full of containers and home-automation projects.
 - 🌍 **Bilingual IT/EN** — client-side language switch with no page reload; the
   choice is remembered in `localStorage`.
 - ⚡ **Zero build step** — plain HTML + CSS + vanilla JS. Nothing to compile,
-  nothing to install.
+  nothing to install. The only external script is [Motion](https://motion.dev)
+  (pinned, with SRI) for the scroll reveals; the page works without it.
 - 📱 **Responsive & accessible** — mobile-friendly layout, `prefers-reduced-motion`
   aware reveal animations, ARIA labels on interactive controls.
 - 🔍 **SEO & social ready** — per-page `<title>`/description, Open Graph + Twitter
@@ -46,7 +47,7 @@ dining, and a homelab full of containers and home-automation projects.
 |---|---|
 | **Markup** | HTML5 (semantic, one file per page) |
 | **Styling** | CSS3 — custom properties, flex/grid, dual-theme, no framework |
-| **Behaviour** | Vanilla JS (ES/IIFE) — i18n, lang switch, `IntersectionObserver` reveals |
+| **Behaviour** | Vanilla JS (ES/IIFE) — i18n, lang switch; scroll reveals with Motion 14.10.1 from jsDelivr (optional, `prefers-reduced-motion` respected) |
 | **Fonts** | Fraunces · Inter · JetBrains Mono (Google Fonts) |
 | **Hosting** | GitHub Pages (deploy from `main` branch, root) |
 
@@ -108,7 +109,7 @@ python3 -m unittest discover -s scripts -p "test_*.py"
 
 ## 🛠️ Run locally
 
-No dependencies — it's a static site. Just serve the folder over HTTP so that
+Nothing to install — it's a static site (Motion is loaded from a CDN and is optional). Just serve the folder over HTTP so that
 relative paths and `localStorage` behave like in production:
 
 ```bash

@@ -24,6 +24,16 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    /* Entrata animata solo se il movimento è permesso. Se Motion non arriva, la classe si toglie entro 1,5 s e niente resta nascosto. */
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      var root = document.documentElement;
+      root.classList.add('motion-ready');
+      window.__glcReveal = setTimeout(function () { root.classList.remove('motion-ready'); }, 1500);
+    })();
+  </script>
 </head>
 
 <body data-page="chef" class="chef-page">
@@ -107,7 +117,7 @@
               <div class="t-head"><span data-i18n="chef.board.school">Scuola</span><span data-i18n="chef.city.firenze">Firenze</span></div>
               <span class="t-period">2016 — 2019</span>
               <h3 class="t-role" data-i18n="chef.edu.role">Laurea in Arti Culinarie</h3>
-              <div class="t-place"><span data-i18n="chef.edu.place">Accademia Italiana di Cucina “Cordon Bleu”</span> 🇮🇹</div>
+              <div class="t-place"><span data-i18n="chef.edu.place">Accademia Italiana di Cucina “Cordon Bleu”</span> <span class="t-country">IT</span></div>
               <p class="t-desc" data-i18n="chef.edu.ticket">EQF 6, accreditata EABHES. Masterclass con chef stellati, gastronomia molecolare, lievito madre, pasticceria e cioccolateria.</p>
             </article>
           </div>
@@ -117,7 +127,7 @@
               <div class="t-head"><span>Nº 01</span><span data-i18n="chef.city.roma">Roma</span></div>
               <span class="t-period">2018</span>
               <h3 class="t-role" data-i18n="chef.r6">Cuoco</h3>
-              <div class="t-place">Grand Hotel Palace 🇮🇹</div>
+              <div class="t-place">Grand Hotel Palace <span class="t-country">IT</span></div>
               <p class="t-desc" data-i18n="chef.t6">Capo partita: antipasti e secondi di pesce.</p>
             </article>
           </div>
@@ -127,7 +137,7 @@
               <div class="t-head"><span>Nº 02</span><span data-i18n="chef.city.firenze">Firenze</span></div>
               <span class="t-period">2019</span>
               <h3 class="t-role" data-i18n="chef.r5b">Capo Partita</h3>
-              <div class="t-place">7 Scogli 🇮🇹</div>
+              <div class="t-place">7 Scogli <span class="t-country">IT</span></div>
               <p class="t-desc" data-i18n="chef.t5b">Capo partita in un ristorante di pesce fiorentino.</p>
             </article>
           </div>
@@ -137,7 +147,7 @@
               <div class="t-head"><span>Nº 03</span><span data-i18n="chef.city.firenze">Firenze</span></div>
               <span class="t-period">2019 — 2020</span>
               <h3 class="t-role">Head Chef</h3>
-              <div class="t-place">Dal Condor 🇮🇹</div>
+              <div class="t-place">Dal Condor <span class="t-country">IT</span></div>
               <p class="t-desc" data-i18n="chef.t5">Prime esperienze di responsabilità: gestione cucina, menù e brigata.</p>
             </article>
           </div>
@@ -147,7 +157,7 @@
               <div class="t-head"><span>Nº 04</span><span>Birmingham</span></div>
               <span class="t-period">2020</span>
               <h3 class="t-role">Sous Chef</h3>
-              <div class="t-place">Laghi’s Deli 🇬🇧</div>
+              <div class="t-place">Laghi’s Deli <span class="t-country">UK</span></div>
               <p class="t-desc" data-i18n="chef.t4">Cucina italiana d’esportazione nel Regno Unito.</p>
             </article>
           </div>
@@ -157,7 +167,7 @@
               <div class="t-head"><span>Nº 05</span><span>Favignana</span></div>
               <span class="t-period">2021</span>
               <h3 class="t-role">Chef de Partie</h3>
-              <div class="t-place">Mangia’s 🇮🇹</div>
+              <div class="t-place">Mangia’s <span class="t-country">IT</span></div>
               <p class="t-desc" data-i18n="chef.t3">Capo partita e turnante in resort.</p>
             </article>
           </div>
@@ -167,7 +177,7 @@
               <div class="t-head"><span>Nº 06</span><span>Riva del Garda</span></div>
               <span class="t-period">2022</span>
               <h3 class="t-role">Chef de Partie</h3>
-              <div class="t-place">Hotel Le Balze 🇮🇹</div>
+              <div class="t-place">Hotel Le Balze <span class="t-country">IT</span></div>
               <p class="t-desc" data-i18n="chef.t2">Responsabile della partita dei primi in un resort wellness 4 stelle sul Garda: risotti, pasta fresca e specialità locali ad alto volume.</p>
             </article>
           </div>
@@ -177,7 +187,7 @@
               <div class="t-head"><span>Nº 07</span><span>Copenhagen</span></div>
               <span class="t-period">2023 — 2026</span>
               <h3 class="t-role">Chef de Partie</h3>
-              <div class="t-place">Circolo 🇩🇰</div>
+              <div class="t-place">Circolo <span class="t-country">DK</span></div>
               <p class="t-desc" data-i18n="chef.t1">Pasta artigianale prodotta ogni giorno (pappardelle, gnudi, gnocchi), cotture alla griglia a carbone Josper, materie prime da piccoli produttori italiani.</p>
             </article>
           </div>
@@ -332,8 +342,7 @@
         </a>
       </div>
       <div class="footer-note">
-        <span>© <span id="year">2026</span> Giovanni La Cascia · </span>
-        <span class="mono" data-i18n="footer.note">fatto con ❤️ tra fornelli e container</span>
+        <span>© <span id="year">2026</span> Giovanni La Cascia</span>
       </div>
     </div>
   </footer>
@@ -341,6 +350,11 @@
   <script src="assets/i18n.js"></script>
   <script src="assets/chef-board.js"></script>
   <script src="assets/chef-plates.js"></script>
+  <!-- Animazioni facoltative (motion.dev): la pagina funziona uguale senza -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@14.10.1/dist/motion.js"
+    integrity="sha384-lnXs/o2QVHbH7aNA9JGkcMdW38AWVgMHWWrPU/fGgHi+eRj2j0a8va/1nlijpjHX" crossorigin="anonymous"
+    onerror="document.documentElement.classList.remove('motion-ready')"></script>
+  <script src="assets/reveal.js"></script>
 </body>
 
 </html>

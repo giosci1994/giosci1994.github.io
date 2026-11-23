@@ -136,7 +136,9 @@
     const lit = [146, 96, 54];
     const dim = [84, 52, 26];
     // l'ombra è opaca (mescolata al colore della carta): i pezzi si sovrappongono senza giunte
-    const paper = [246, 239, 227];
+    // il colore della pagina (carta di giorno, scuro col tema scuro): letto dallo sfondo del body
+    const bodyBg = (getComputedStyle(document.body).backgroundColor.match(/\d+/g) || []).map(Number);
+    const paper = bodyBg.length >= 3 ? bodyBg.slice(0, 3) : [246, 239, 227];
     const ink = [44, 22, 4];
     const mix = (a) => paper.map((v, j) => Math.round(v + (ink[j] - v) * a));
     for (const piece of pieces) {
