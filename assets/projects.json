@@ -3,6 +3,36 @@
   "topic": "showcase",
   "projects": [
     {
+      "name": "PC-MQTT-Notifier",
+      "title": "PC MQTT Notifier",
+      "description": "🔔 Lightweight Windows notification overlay for MQTT & Home Assistant — customizable scale, transparency, fluid background, tray icon & bilingual i18n.",
+      "url": "https://giosci1994.github.io/PC-MQTT-Notifier/",
+      "repo": "https://github.com/giosci1994/PC-MQTT-Notifier",
+      "image": "https://repository-images.githubusercontent.com/1315059322/97834993-8fd7-421b-8ec0-82d891fb6f2e",
+      "language": "Python",
+      "license": "GPL-3.0",
+      "categories": [
+        "Windows",
+        "Home Assistant"
+      ],
+      "topics": [
+        "auto-updater",
+        "customtkinter",
+        "desktop-app",
+        "fluid-background",
+        "home-assistant",
+        "i18n",
+        "mqtt",
+        "notifications",
+        "overlay",
+        "python",
+        "system-tray",
+        "windows",
+        "windows-11"
+      ],
+      "pushed_at": "2026-11-24T15:10:40Z"
+    },
+    {
       "name": "widget-spotify",
       "title": "Widget Spotify",
       "description": "🎵 Spotify remote in the Windows system tray — now playing, controls & device switch (Echo/PC/phone). Electron + Spotify Web API.",
@@ -30,7 +60,7 @@
         "widget",
         "windows"
       ],
-      "pushed_at": "2026-11-24T04:48:21Z"
+      "pushed_at": "2026-11-24T14:17:58Z"
     },
     {
       "name": "kitchen-app",
@@ -85,36 +115,6 @@
         "traduzione"
       ],
       "pushed_at": "2026-11-23T09:36:10Z"
-    },
-    {
-      "name": "PC-MQTT-Notifier",
-      "title": "PC MQTT Notifier",
-      "description": "🔔 Lightweight Windows notification overlay for MQTT & Home Assistant — customizable scale, transparency, fluid background, tray icon & bilingual i18n.",
-      "url": "https://giosci1994.github.io/PC-MQTT-Notifier/",
-      "repo": "https://github.com/giosci1994/PC-MQTT-Notifier",
-      "image": "https://repository-images.githubusercontent.com/1315059322/97834993-8fd7-421b-8ec0-82d891fb6f2e",
-      "language": "Python",
-      "license": "GPL-3.0",
-      "categories": [
-        "Windows",
-        "Home Assistant"
-      ],
-      "topics": [
-        "auto-updater",
-        "customtkinter",
-        "desktop-app",
-        "fluid-background",
-        "home-assistant",
-        "i18n",
-        "mqtt",
-        "notifications",
-        "overlay",
-        "python",
-        "system-tray",
-        "windows",
-        "windows-11"
-      ],
-      "pushed_at": "2026-11-23T09:36:07Z"
     },
     {
       "name": "ingegnere-f1",
